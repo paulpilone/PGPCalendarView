@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
+#use_frameworks!
 
 target 'PGPCalendarView_Example', :exclusive => true do
   pod "PGPCalendarView", :path => "../"
