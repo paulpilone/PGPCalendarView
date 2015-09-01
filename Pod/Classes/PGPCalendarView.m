@@ -15,6 +15,8 @@
 
 @interface PGPCalendarView () < UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout >
 
+@property (nonatomic) BOOL needsFirstLayoutPass;
+
 @property (nonatomic, strong) PGPCalendarController *calendarController;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -56,6 +58,11 @@
     [super layoutSubviews];
 
     [self.collectionView reloadData];
+    
+    if (self.needsFirstLayoutPass) {
+        [self selectDateAtIndexPath:[self.calendarController indexPathForDate:self.selectedDate] animated:NO];
+        self.needsFirstLayoutPass = NO;
+    }
 }
 
 /* */
@@ -73,18 +80,8 @@
         _selectedDate = selectedDate;
         
         NSIndexPath *indexPath = [self.calendarController indexPathForDate:_selectedDate];
-        //if (indexPath && ![[self.collectionView indexPathsForVisibleItems] containsObject:indexPath]) {
-        if (indexPath) {
-            // If paging is enabled, we have to be careful about where we tell the collection view to scroll
-            // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
-            // next tap on the collection view will scroll the cell out of view.
-            UICollectionViewScrollPosition scrollPosition = UICollectionViewScrollPositionTop;
-            if (self.collectionView.pagingEnabled && indexPath.row % 14 > 6) {
-                // Determining the scroll position here works because we know we're showing 14 cells (2 x 7 grid).
-                scrollPosition = UICollectionViewScrollPositionBottom;
-            }
-            
-            [self.collectionView selectItemAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
+        if (indexPath && !self.needsFirstLayoutPass) {
+            [self selectDateAtIndexPath:indexPath animated:animated];
         }
     }
 }
@@ -95,6 +92,7 @@
 /* */
 - (void)baseInit {
     _calendarController = [[PGPCalendarController alloc] init];
+    _needsFirstLayoutPass = YES;
     _selectedDate = _calendarController.startDate;
     
     PGPCalendarHeaderView *headerView = [[PGPCalendarHeaderView alloc] initWithWeekdaySymbols:self.calendarController.shortWeekdaySymbols];
@@ -126,6 +124,20 @@
     NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([PGPCalendarViewCell class]) bundle:calendarBundle];
     [_collectionView registerNib:nib forCellWithReuseIdentifier:PGPCalendarViewCellIdentifier];
+}
+
+/* */
+- (void)selectDateAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
+    // If paging is enabled, we have to be careful about where we tell the collection view to scroll
+    // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
+    // next tap on the collection view will scroll the cell out of view.
+    UICollectionViewScrollPosition scrollPosition = UICollectionViewScrollPositionTop;
+    if (self.collectionView.pagingEnabled && indexPath.row % 14 > 6) {
+        // Determining the scroll position here works because we know we're showing 14 cells (2 x 7 grid).
+        scrollPosition = UICollectionViewScrollPositionBottom;
+    }
+    
+    [self.collectionView selectItemAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
 }
 
 #pragma mark -
