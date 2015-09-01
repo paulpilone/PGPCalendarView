@@ -14,6 +14,8 @@
 
 @property (nonatomic, readonly) NSDate *startDate;
 
+@property (nonatomic, readonly) NSArray *shortWeekdaySymbols;
+
 /* */
 - (NSInteger)numberOfDates;
 

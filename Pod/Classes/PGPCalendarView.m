@@ -12,6 +12,7 @@
 #import "NSDate+PGPCalendarViewAdditions.h"
 #import "PGPCalendarController.h"
 #import "PGPCalendarViewCell.h"
+#import "PGPCalendarHeaderView.h"
 
 @interface PGPCalendarView () < UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout >
 
@@ -63,6 +64,11 @@
 - (void)baseInit {
     _calendarController = [[PGPCalendarController alloc] init];
     
+    PGPCalendarHeaderView *headerView = [[PGPCalendarHeaderView alloc] initWithWeekdaySymbols:self.calendarController.shortWeekdaySymbols];
+    headerView.backgroundColor = self.backgroundColor;
+    headerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:headerView];
+
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumInteritemSpacing = 0.f;
     flowLayout.minimumLineSpacing = 0.f;
@@ -78,9 +84,10 @@
     _collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_collectionView];
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(_collectionView);
+    NSDictionary *views = NSDictionaryOfVariableBindings(headerView, _collectionView);
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[headerView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_collectionView]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_collectionView]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[headerView(18)][_collectionView]|" options:0 metrics:nil views:views]];
     
     NSString *calendarBundlePath = [[NSBundle mainBundle] pathForResource:@"PGPCalendarView" ofType:@"bundle"];
     NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
@@ -101,8 +108,6 @@
     PGPCalendarViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PGPCalendarViewCellIdentifier forIndexPath:indexPath];
     
     NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
-    //NSLog(@"Date for indexPath %@ is %@", indexPath, date);
-    
     if (date == nil) { // Placeholder cell.
         cell.textLabel.text = nil;
     } else {
@@ -126,7 +131,7 @@
 
 /* */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(CGRectGetWidth(self.bounds) / 7.f, CGRectGetHeight(self.bounds) / 2.f);
+    return CGSizeMake(CGRectGetWidth(collectionView.bounds) / 7.f, CGRectGetHeight(collectionView.bounds) / 2.f);
 }
 
 @end

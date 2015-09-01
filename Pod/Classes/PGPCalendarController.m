@@ -12,9 +12,15 @@
 
 @interface PGPCalendarController ()
 
+@property (nonatomic, strong) NSCalendar *calendar;
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+
 @property (nonatomic, readwrite) NSDate *endDate;
 
 @property (nonatomic, readwrite) NSDate *startDate;
+
+@property (nonatomic, readwrite) NSArray *weekdaySymbols;
 
 @property (nonatomic) NSInteger numberOfAvailableDays;
 
@@ -28,24 +34,24 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        _calendar = [NSCalendar currentCalendar];
+        _dateFormatter = [[NSDateFormatter alloc] init];
         _numberOfAvailableDays = -1;
         _startDateWeekdayOffset = -1;
-        
-        NSCalendar *calendar = [NSCalendar currentCalendar];
         
         NSDateComponents *startComps = [[NSDateComponents alloc] init];
         [startComps setYear:2014];
         [startComps setMonth:1];
         [startComps setDay:1];
         
-        _startDate = [calendar dateFromComponents:startComps];
+        _startDate = [_calendar dateFromComponents:startComps];
         
         NSDateComponents *endComps = [[NSDateComponents alloc] init];
         [endComps setYear:2049];
         [endComps setMonth:1];
         [endComps setDay:1];
         
-        _endDate = [calendar dateFromComponents:endComps];
+        _endDate = [_calendar dateFromComponents:endComps];
         
         // Determine the weekday our start date represents in order to determine the offset we need for our data source.
         NSLog(@"Initialized PGPCalendarController with start date: %@, end date: %@", _startDate, _endDate);
@@ -63,12 +69,10 @@
     // First attempt at solving this: Use NSDateComponents to determine
     // offset (indexPath.row) from start date in days. From those components,
     // create a new date. This might be really slow -- probably is.
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setDay:[indexPath indexAtPosition:1] - self.startDateWeekdayOffset];
     
-    return [calendar dateByAddingComponents:comps toDate:self.startDate options:0];
+    return [self.calendar dateByAddingComponents:comps toDate:self.startDate options:0];
 }
 
 /* */
@@ -79,8 +83,7 @@
 /* */
 - (NSInteger)startDateWeekdayOffset {
     if (_startDateWeekdayOffset == -1) {
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSInteger calendarWeekday = [[calendar components:NSCalendarUnitWeekday fromDate:self.startDate] weekday];
+        NSInteger calendarWeekday = [[self.calendar components:NSCalendarUnitWeekday fromDate:self.startDate] weekday];
         
         // We'll subtract 1 from our offset so that 'Sunday' appears as 0. This makes
         // calculations for our purposes easier.
@@ -88,6 +91,19 @@
     }
     
     return _startDateWeekdayOffset ;
+}
+
+/* */
+- (NSArray *)shortWeekdaySymbols {
+    NSMutableArray *mutableWeekdaySymbols = [NSMutableArray array];
+
+    NSUInteger zeroIndexFirstWeekday = self.calendar.firstWeekday - 1;
+    NSArray *defaultWeekdaySymbols = self.dateFormatter.shortWeekdaySymbols;
+    
+    [mutableWeekdaySymbols addObjectsFromArray:[defaultWeekdaySymbols subarrayWithRange:NSMakeRange(zeroIndexFirstWeekday, [defaultWeekdaySymbols count])]];
+    [mutableWeekdaySymbols addObjectsFromArray:[defaultWeekdaySymbols subarrayWithRange:NSMakeRange(0, zeroIndexFirstWeekday)]];
+    
+    return mutableWeekdaySymbols;
 }
 
 #pragma mark -
