@@ -76,6 +76,25 @@
 }
 
 /* */
+- (NSIndexPath *)indexPathForDate:(NSDate *)date {
+    NSInteger startDifference = [self.startDate pgp_numberOfDaysBetweenDate:date];
+    NSUInteger indexes[] = { 0, startDifference + self.startDateWeekdayOffset };
+    return [[NSIndexPath alloc] initWithIndexes:indexes length:2];
+}
+
+/* */
+- (BOOL)isValidDate:(NSDate *)date {
+    BOOL valid = YES;
+    NSComparisonResult startResult = [self.startDate compare:date];
+    valid = valid && (startResult == NSOrderedSame || startResult == NSOrderedAscending);
+    
+    NSComparisonResult endResult = [self.endDate compare:date];
+    valid = valid && (endResult = NSOrderedSame || endResult == NSOrderedDescending);
+
+    return valid;
+}
+
+/* */
 - (NSInteger)numberOfDates {
     return self.numberOfAvailableDays;
 }

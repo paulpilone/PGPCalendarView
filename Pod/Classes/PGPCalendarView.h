@@ -10,8 +10,8 @@
 
 @interface PGPCalendarView : UIView
 
-@property (nonatomic, readonly) NSDate *endDate;
+@property (nonatomic, strong) NSDate *selectedDate;
 
-@property (nonatomic, readonly) NSDate *startDate;
+- (void)setSelectedDate:(NSDate *)selectedDate animated:(BOOL)animated;
 
 @end

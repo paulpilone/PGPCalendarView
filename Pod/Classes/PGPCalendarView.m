@@ -8,7 +8,6 @@
 
 #import "PGPCalendarView.h"
 
-
 #import "NSDate+PGPCalendarViewAdditions.h"
 #import "PGPCalendarController.h"
 #import "PGPCalendarViewCell.h"
@@ -55,6 +54,36 @@
     [super layoutSubviews];
 
     [self.collectionView reloadData];
+}
+
+/* */
+- (void)setSelectedDate:(NSDate *)selectedDate {
+    [self setSelectedDate:selectedDate animated:NO];
+}
+
+/* */
+- (void)setSelectedDate:(NSDate *)selectedDate animated:(BOOL)animated {
+    if (![self.calendarController isValidDate:selectedDate]) {
+        return;
+    }
+    
+    if (_selectedDate != selectedDate) {
+        _selectedDate = selectedDate;
+        
+        NSIndexPath *indexPath = [self.calendarController indexPathForDate:_selectedDate];
+        if (indexPath) {
+            // If paging is enabled, we have to be careful about where we tell the collection view to scroll
+            // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
+            // next tap on the collection view will scroll the cell out of view.
+            UICollectionViewScrollPosition scrollPosition = UICollectionViewScrollPositionTop;
+            if (self.collectionView.pagingEnabled && indexPath.row % 14 > 6) {
+                // Determining the scroll position here works because we know we're showing 14 cells (2 x 7 grid).
+                scrollPosition = UICollectionViewScrollPositionBottom;
+            }
+            
+            [self.collectionView selectItemAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
+        }
+    }
 }
 
 #pragma mark -

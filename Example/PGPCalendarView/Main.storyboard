@@ -24,15 +24,29 @@
                                     <constraint firstAttribute="height" constant="120" id="0bC-dt-nGR"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCt-as-php">
+                                <rect key="frame" x="280" y="550" width="41" height="30"/>
+                                <state key="normal" title="Today">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="today:" destination="whP-gf-Uak" eventType="touchUpInside" id="1OH-X3-3zj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8dH-BK-Jl3" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="HGY-wb-DXK"/>
+                            <constraint firstAttribute="centerX" secondItem="nCt-as-php" secondAttribute="centerX" id="QIo-L2-rJx"/>
                             <constraint firstAttribute="trailing" secondItem="8dH-BK-Jl3" secondAttribute="trailing" id="Qlt-4g-TpM"/>
                             <constraint firstAttribute="centerX" secondItem="8dH-BK-Jl3" secondAttribute="centerX" id="YIS-hw-heF"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="nCt-as-php" secondAttribute="bottom" constant="20" id="njg-6Z-uEX"/>
                             <constraint firstItem="8dH-BK-Jl3" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="qPT-Xh-w3w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="8dH-BK-Jl3" id="alv-Y2-lDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

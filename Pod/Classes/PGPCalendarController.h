@@ -22,4 +22,10 @@
 /* */
 - (NSDate *)dateAtIndexPath:(NSIndexPath *)indexPath;
 
+/* */
+- (NSIndexPath *)indexPathForDate:(NSDate *)date;
+
+/* */
+- (BOOL)isValidDate:(NSDate *)date;
+
 @end

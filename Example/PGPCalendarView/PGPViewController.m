@@ -8,11 +8,18 @@
 
 #import "PGPViewController.h"
 
+#import "PGPCalendarView.h"
+
 @interface PGPViewController ()
+@property (weak, nonatomic) IBOutlet PGPCalendarView *calendarView;
 
 @end
 
 @implementation PGPViewController
+
+- (IBAction)today:(id)sender {
+    [self.calendarView setSelectedDate:[NSDate date] animated:YES];
+}
 
 - (void)viewDidLoad
 {
