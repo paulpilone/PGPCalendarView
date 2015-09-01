@@ -156,7 +156,14 @@
 
 /* */
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
+    if (date == nil) {
+        date = self.calendarController.startDate;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+        [self.delegate calendarView:self didSelectDate:date];
+    }
 }
 
 #pragma mark -
