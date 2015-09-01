@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
+@property (nonatomic, readwrite) NSDate *monthYearDate;
+
 @end
 
 @implementation PGPCalendarView
@@ -71,6 +73,7 @@
         _selectedDate = selectedDate;
         
         NSIndexPath *indexPath = [self.calendarController indexPathForDate:_selectedDate];
+        //if (indexPath && ![[self.collectionView indexPathsForVisibleItems] containsObject:indexPath]) {
         if (indexPath) {
             // If paging is enabled, we have to be careful about where we tell the collection view to scroll
             // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
@@ -92,6 +95,7 @@
 /* */
 - (void)baseInit {
     _calendarController = [[PGPCalendarController alloc] init];
+    _selectedDate = _calendarController.startDate;
     
     PGPCalendarHeaderView *headerView = [[PGPCalendarHeaderView alloc] initWithWeekdaySymbols:self.calendarController.shortWeekdaySymbols];
     headerView.backgroundColor = self.backgroundColor;
@@ -161,6 +165,22 @@
 /* */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(CGRectGetWidth(collectionView.bounds) / 7.f, CGRectGetHeight(collectionView.bounds) / 2.f);
+}
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate
+
+/* */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:self.collectionView.contentOffset];
+    if (indexPath) {
+        NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
+        if (date == nil) {
+            date = self.calendarController.startDate;
+        }
+        
+        [self setSelectedDate:date animated:NO];
+    }
 }
 
 @end

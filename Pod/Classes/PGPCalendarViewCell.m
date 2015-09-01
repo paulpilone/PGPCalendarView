@@ -10,4 +10,11 @@
 
 @implementation PGPCalendarViewCell
 
+/* */
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    self.textLabel.textColor = selected ? [UIColor blueColor] : [UIColor blackColor];
+}
+
 @end

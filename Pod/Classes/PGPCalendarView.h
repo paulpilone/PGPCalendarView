@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
+@property (nonatomic, readonly) NSDate *monthYearDate;
+
 - (void)setSelectedDate:(NSDate *)selectedDate animated:(BOOL)animated;
 
 @end
