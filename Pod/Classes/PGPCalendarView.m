@@ -52,7 +52,7 @@
 /* */
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
+
     [self.collectionView reloadData];
 }
 
@@ -103,8 +103,12 @@
     NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
     //NSLog(@"Date for indexPath %@ is %@", indexPath, date);
     
-    NSDateComponents *dateComps = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
+    if (date == nil) { // Placeholder cell.
+        cell.textLabel.text = nil;
+    } else {
+        NSDateComponents *dateComps = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
+    }
     
     return cell;
 }
