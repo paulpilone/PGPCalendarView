@@ -21,8 +21,6 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-@property (nonatomic, readwrite) NSDate *monthYearDate;
-
 @end
 
 @implementation PGPCalendarView
@@ -154,10 +152,12 @@
     
     NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
     if (date == nil) { // Placeholder cell.
-        cell.textLabel.text = nil;
+        cell.dateLabel.text = nil;
     } else {
+        cell.today = [self.calendarController isToday:date];
+        
         NSDateComponents *dateComps = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
-        cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
+        cell.dateLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
     }
     
     return cell;
@@ -199,6 +199,10 @@
         }
         
         [self setSelectedDate:date animated:NO];
+        
+        if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+            [self.delegate calendarView:self didSelectDate:date];
+        }
     }
 }
 

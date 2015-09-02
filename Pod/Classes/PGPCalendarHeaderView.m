@@ -36,8 +36,8 @@
             
             [self addConstraints:@[
                                    [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0.f],
-                                   [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self  attribute:NSLayoutAttributeTop multiplier:1.f constant:0.f],
-                                   [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.f constant:0.f]
+                                   [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self  attribute:NSLayoutAttributeTop multiplier:1.f constant:2.f],
+                                   [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.f constant:-2.f]
                                    ]];
         }
     }
@@ -51,7 +51,6 @@
 /* */
 - (UILabel *)labelWithWeekdaySymbol:(NSString *)symbol {
     UILabel *label = [[UILabel alloc] init];
-    label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     label.text = [symbol uppercaseString];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor blackColor];

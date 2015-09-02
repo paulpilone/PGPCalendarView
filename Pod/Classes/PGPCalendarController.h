@@ -26,6 +26,9 @@
 - (NSIndexPath *)indexPathForDate:(NSDate *)date;
 
 /* */
+- (BOOL)isToday:(NSDate *)date;
+
+/* */
 - (BOOL)isValidDate:(NSDate *)date;
 
 @end

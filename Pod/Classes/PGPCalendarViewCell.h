@@ -12,6 +12,16 @@ static NSString * const PGPCalendarViewCellIdentifier = @"PGPCalendarViewCellIde
 
 @interface PGPCalendarViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+@property (nonatomic, getter=isToday) BOOL today;
+
+@property (nonatomic, strong) UIColor *textColor UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, strong) UIColor *todayTextColor UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, strong) UIColor *todaySelectedTextColor UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, strong) UIColor *todaySelectedBackgroundColor UI_APPEARANCE_SELECTOR;
 
 @end

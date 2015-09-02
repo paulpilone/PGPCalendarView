@@ -16,7 +16,11 @@
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
-@property (nonatomic, readonly) NSDate *monthYearDate;
+/*
+ * Appearance
+ */
+
+@property (nonatomic, strong) UIColor *todayColor UI_APPEARANCE_SELECTOR;
 
 - (void)setSelectedDate:(NSDate *)selectedDate animated:(BOOL)animated;
 

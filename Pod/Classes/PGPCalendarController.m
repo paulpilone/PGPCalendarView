@@ -83,6 +83,11 @@
 }
 
 /* */
+- (BOOL)isToday:(NSDate *)date {
+    return [self.calendar isDateInToday:date];
+}
+
+/* */
 - (BOOL)isValidDate:(NSDate *)date {
     BOOL valid = YES;
     NSComparisonResult startResult = [self.startDate compare:date];
