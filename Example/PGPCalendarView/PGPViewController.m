@@ -24,22 +24,39 @@
 - (NSArray *)calendarView:(PGPCalendarView *)calendarView markersForDate:(NSDate *)date {
     
     NSDateComponents *comps = [[NSCalendar currentCalendar] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
-    NSInteger divisible = comps.day % 3;
+    NSInteger divisible = comps.day % 4;
     if (divisible == 0) {
         return @[
                  [UIColor redColor],
                  [UIColor blueColor],
                  [UIColor greenColor],
-                 [UIColor redColor]
+                 [UIColor redColor],
+                 [UIColor blackColor]
                  ];
     } else if (divisible == 1) {
         return @[
                  [UIColor cyanColor],
                  [UIColor blackColor],
-                 [UIColor redColor]
+                 [UIColor redColor],
+                 [UIColor greenColor]
                 ];
+    } else if (divisible == 2) {
+        return @[
+                 [UIColor redColor],
+                 [UIColor blueColor],
+                 [UIColor greenColor],
+                 [UIColor redColor],
+                 [UIColor redColor],
+                 [UIColor blueColor],
+                 [UIColor greenColor],
+                 [UIColor redColor]
+                 ];
     } else {
-        return @[];
+        return @[
+                 [UIColor cyanColor],
+                 [UIColor blackColor],
+                 [UIColor redColor]
+                 ];
     }
 }
 

@@ -32,14 +32,28 @@ static CGFloat PGPCalendarMarkerPadding = 2.f;
     for (NSInteger i = 0; i < numberOfSublayers; i++) {
         CALayer *sublayer = layer.sublayers[i];
         
-        CGFloat xOffset = CGRectGetMidX(layer.bounds) - (self.markerSize.width * (i - 1));
-        if (numberOfSublayers % 2 == 1) {
-            xOffset = xOffset - (.5  * self.markerSize.width);
+        NSInteger markerPositionInRow = (i % 5);
+        NSInteger numberOfSublayersInRow = i >= 5 ? numberOfSublayers - 5 : (numberOfSublayers > 5) ? 5 : numberOfSublayers;
+        
+        CGFloat totalWidthOfRow = numberOfSublayersInRow * self.markerSize.width + ((numberOfSublayersInRow - 1) * PGPCalendarMarkerPadding);
+        CGFloat rowOriginX = CGRectGetMidX(layer.bounds) - (totalWidthOfRow / 2.f);
+        
+        CGFloat markerOriginX = rowOriginX + (markerPositionInRow * self.markerSize.width) + (markerPositionInRow * PGPCalendarMarkerPadding);
+        
+        // -------------------------------
+        // Below this line things are good.
+        
+        CGFloat markerOriginY;
+        if (numberOfSublayers > 5) {
+            NSInteger coefficient = 5 - i > 0 ? (-1 * self.markerSize.height) - (PGPCalendarMarkerPadding / 2.f) : (PGPCalendarMarkerPadding / 2.f);
+            markerOriginY = CGRectGetMidY(layer.bounds) + coefficient;
+        } else {
+            markerOriginY = CGRectGetMidY(layer.bounds) - (self.markerSize.height / 2.f);
         }
-
+    
         CGRect frame = sublayer.frame;
-        frame.origin.x = xOffset - (((i - (numberOfSublayers - (i + 1))) * .5) * PGPCalendarMarkerPadding);
-        frame.origin.y = CGRectGetMidY(layer.bounds) - (self.markerSize.height / 2.f);
+        frame.origin.x = markerOriginX;
+        frame.origin.y = markerOriginY;
         frame.size.width = self.markerSize.width;
         frame.size.height = self.markerSize.height;
         sublayer.frame = frame;
@@ -60,7 +74,9 @@ static CGFloat PGPCalendarMarkerPadding = 2.f;
 - (void)setMarkers:(NSArray *)markers {
     [self removeMarkers];
     
-    for (id marker in markers) {
+    for (NSInteger i = 0; (i < [markers count] && i < 10); i++) {
+        id marker = markers[i];
+        
         // TODO: Maybe make this a class that conforms to a protocol that
         // requires a property 'color'.
         if (![marker isKindOfClass:[UIColor class]]) {
