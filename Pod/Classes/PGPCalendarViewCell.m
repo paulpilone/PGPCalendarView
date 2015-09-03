@@ -8,7 +8,12 @@
 
 #import "PGPCalendarViewCell.h"
 
+#import "PGPCalendarMarkerContainerView.h"
+
 @interface PGPCalendarViewCell ()
+
+@property (weak, nonatomic) IBOutlet PGPCalendarMarkerContainerView *markerView;
+
 @end
 
 @implementation PGPCalendarViewCell
@@ -29,6 +34,8 @@
     [super prepareForReuse];
 
     self.today = NO;
+
+    [self.markerView removeMarkers];
 }
 
 /* */
@@ -52,6 +59,11 @@
             self.dateLabel.textColor = self.textColor;
         }
     }
+}
+
+/* */
+- (void)setMarkers:(NSArray *)markers {
+    [self.markerView setMarkers:markers];
 }
 
 /* */

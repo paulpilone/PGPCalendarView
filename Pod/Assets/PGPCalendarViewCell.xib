@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
@@ -13,17 +14,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nn-FT-v3u">
-                        <rect key="frame" x="4" y="14" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nn-FT-v3u">
+                        <rect key="frame" x="8" y="8" width="34" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLp-Mb-gTo" customClass="PGPCalendarMarkerContainerView">
+                        <rect key="frame" x="8" y="29" width="34" height="18"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="uE0-uJ-tGg"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8nn-FT-v3u" secondAttribute="trailing" constant="8" id="7Kz-vj-9cA"/>
+                <constraint firstItem="LLp-Mb-gTo" firstAttribute="leading" secondItem="mh3-QA-ZDE" secondAttribute="leading" constant="8" id="KoJ-ls-i40"/>
+                <constraint firstItem="8nn-FT-v3u" firstAttribute="top" secondItem="mh3-QA-ZDE" secondAttribute="top" constant="8" id="Xd5-DA-PgS"/>
+                <constraint firstAttribute="trailing" secondItem="LLp-Mb-gTo" secondAttribute="trailing" constant="8" id="i99-tU-u0u"/>
+                <constraint firstItem="8nn-FT-v3u" firstAttribute="leading" secondItem="mh3-QA-ZDE" secondAttribute="leading" constant="8" id="pis-gJ-nQu"/>
+                <constraint firstItem="LLp-Mb-gTo" firstAttribute="top" secondItem="8nn-FT-v3u" secondAttribute="bottom" id="soy-it-FZU"/>
+            </constraints>
             <connections>
                 <outlet property="dateLabel" destination="8nn-FT-v3u" id="rV4-0O-3OZ"/>
+                <outlet property="markerView" destination="LLp-Mb-gTo" id="93T-bG-dgm"/>
             </connections>
             <point key="canvasLocation" x="259" y="433"/>
         </collectionViewCell>

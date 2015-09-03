@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol PGPCalendarViewDelegate;
+@protocol PGPCalendarViewDelegate, PGPCalendarViewDataSource;
 
 @interface PGPCalendarView : UIView
 
 @property (nonatomic, weak) id<PGPCalendarViewDelegate> delegate;
+
+@property (nonatomic, weak) id<PGPCalendarViewDataSource> dataSource;
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
@@ -31,5 +33,13 @@
 @required
 
 - (void)calendarView:(PGPCalendarView *)calendarView didSelectDate:(NSDate *)date;
+
+@end
+
+@protocol PGPCalendarViewDataSource <NSObject>
+
+@required
+
+- (NSArray *)calendarView:(PGPCalendarView *)calendarView markersForDate:(NSDate *)date;
 
 @end

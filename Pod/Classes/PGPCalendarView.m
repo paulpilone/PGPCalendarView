@@ -158,6 +158,8 @@
         
         NSDateComponents *dateComps = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
         cell.dateLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
+        
+        cell.markers = [self.dataSource calendarView:self markersForDate:date];
     }
     
     return cell;

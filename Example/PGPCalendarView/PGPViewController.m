@@ -10,7 +10,7 @@
 
 #import "PGPCalendarView.h"
 
-@interface PGPViewController ()
+@interface PGPViewController () < PGPCalendarViewDataSource >
 @property (weak, nonatomic) IBOutlet PGPCalendarView *calendarView;
 
 @end
@@ -21,10 +21,33 @@
     [self.calendarView setSelectedDate:[NSDate date] animated:YES];
 }
 
+- (NSArray *)calendarView:(PGPCalendarView *)calendarView markersForDate:(NSDate *)date {
+    
+    NSDateComponents *comps = [[NSCalendar currentCalendar] components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
+    NSInteger divisible = comps.day % 3;
+    if (divisible == 0) {
+        return @[
+                 [UIColor redColor],
+                 [UIColor blueColor],
+                 [UIColor greenColor],
+                 [UIColor redColor]
+                 ];
+    } else if (divisible == 1) {
+        return @[
+                 [UIColor cyanColor],
+                 [UIColor blackColor],
+                 [UIColor redColor]
+                ];
+    } else {
+        return @[];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.calendarView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning

@@ -24,4 +24,6 @@ static NSString * const PGPCalendarViewCellIdentifier = @"PGPCalendarViewCellIde
 
 @property (nonatomic, strong) UIColor *todaySelectedBackgroundColor UI_APPEARANCE_SELECTOR;
 
+- (void)setMarkers:(NSArray *)markers;
+
 @end
