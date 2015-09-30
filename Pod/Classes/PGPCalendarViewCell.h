@@ -16,13 +16,13 @@ static NSString * const PGPCalendarViewCellIdentifier = @"PGPCalendarViewCellIde
 
 @property (nonatomic, getter=isToday) BOOL today;
 
-@property (nonatomic, strong) UIColor *textColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIColor *textColor;
 
-@property (nonatomic, strong) UIColor *todayTextColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIColor *todayTextColor;
 
-@property (nonatomic, strong) UIColor *todaySelectedTextColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIColor *todaySelectedTextColor;
 
-@property (nonatomic, strong) UIColor *todaySelectedBackgroundColor UI_APPEARANCE_SELECTOR;
+@property (nonatomic, strong) UIColor *todaySelectedBackgroundColor;
 
 - (void)setMarkers:(NSArray *)markers;
 

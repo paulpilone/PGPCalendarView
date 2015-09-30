@@ -10,6 +10,8 @@
 
 @interface PGPCalendarController : NSObject
 
+@property (nonatomic, readonly) NSCalendar *calendar;
+
 @property (nonatomic, readonly) NSDate *endDate;
 
 @property (nonatomic, readonly) NSDate *startDate;

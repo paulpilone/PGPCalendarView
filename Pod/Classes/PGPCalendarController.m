@@ -12,7 +12,7 @@
 
 @interface PGPCalendarController ()
 
-@property (nonatomic, strong) NSCalendar *calendar;
+@property (nonatomic, readwrite) NSCalendar *calendar;
 
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 

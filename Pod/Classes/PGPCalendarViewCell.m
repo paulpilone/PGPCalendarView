@@ -34,7 +34,6 @@
     [super prepareForReuse];
 
     self.today = NO;
-
     [self.markerView removeMarkers];
 }
 
@@ -70,7 +69,7 @@
 - (void)setToday:(BOOL)today {
     if (_today != today) {
         _today = today;
-        
+
         self.dateLabel.textColor = _today ? self.todayTextColor : self.textColor;
     }
 }
