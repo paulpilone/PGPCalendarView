@@ -222,14 +222,11 @@
     [self addSubview:_borderView];
     
     views = NSDictionaryOfVariableBindings(navigationView, headerView, _collectionView, _borderView);
-    //[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[moveBackwardButton(24)]-[_monthLabel]-[moveForwardButton(24)]-|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[navigationView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[headerView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_collectionView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_borderView]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[navigationView][headerView(17)][_collectionView][_borderView(1)]|" options:0 metrics:nil views:views]];
-//    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[moveBackwardButton(24)]" options:0 metrics:nil views:views]];
-//    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[moveForwardButton(24)]" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[navigationView(32)][headerView(17)][_collectionView][_borderView(1)]|" options:0 metrics:nil views:views]];
     
     NSString *calendarBundlePath = [[NSBundle mainBundle] pathForResource:@"PGPCalendarView" ofType:@"bundle"];
     NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
