@@ -42,6 +42,11 @@
 /**
  
  */
+- (void)reloadDate:(NSDate *)date;
+
+/**
+ 
+ */
 - (void)setSelectedDate:(NSDate *)selectedDate animated:(BOOL)animated;
 
 /**

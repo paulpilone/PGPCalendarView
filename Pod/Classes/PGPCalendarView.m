@@ -93,6 +93,14 @@
 }
 
 /* */
+- (void)reloadDate:(NSDate *)date {
+    NSIndexPath *indexPath = [self.calendarController indexPathForDate:date];
+    if (indexPath) {
+        [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    }
+}
+
+/* */
 - (void)setBorderColor:(UIColor *)borderColor {
     self.borderView.backgroundColor = borderColor;
 }
@@ -110,11 +118,17 @@
     
     NSDate *startOfSelectedDate = [self.calendarController.calendar startOfDayForDate:selectedDate];
     if (_selectedDate != startOfSelectedDate) {
+        NSIndexPath *oldIndexPath  = [self.calendarController indexPathForDate:_selectedDate];
+        if (oldIndexPath) {
+            UICollectionViewCell *oldCell = [self.collectionView cellForItemAtIndexPath:oldIndexPath];
+            oldCell.selected = NO;
+        }
+        
         _selectedDate = startOfSelectedDate;
         
-        NSIndexPath *indexPath = [self.calendarController indexPathForDate:_selectedDate];
-        if (indexPath && !self.needsFirstLayoutPass) {
-            [self selectItemAtIndexPath:indexPath animated:animated];
+        NSIndexPath *newIndexPath = [self.calendarController indexPathForDate:_selectedDate];
+        if (newIndexPath && !self.needsFirstLayoutPass) {
+            [self selectItemAtIndexPath:newIndexPath animated:animated];
         }
     }
 }
@@ -306,6 +320,7 @@
 /* */
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PGPCalendarViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PGPCalendarViewCellIdentifier forIndexPath:indexPath];
+    cell.tintColor = self.tintColor;
     cell.textColor = self.dayTextColor;
     cell.todaySelectedBackgroundColor = self.todaySelectedBackgroundColor;
     cell.todaySelectedTextColor = self.todaySelectedTextColor;
@@ -337,6 +352,8 @@
         date = self.calendarController.startDate;
     }
     
+    self.selectedDate = date;
+    
     if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
         [self.delegate calendarView:self didSelectDate:date];
     }
@@ -355,7 +372,6 @@
 
 /* */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndDecelerating");
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:self.collectionView.contentOffset];
     if (indexPath) {
         NSDate *startDate = [self.calendarController dateAtIndexPath:indexPath];

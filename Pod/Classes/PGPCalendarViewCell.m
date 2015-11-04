@@ -26,6 +26,8 @@
     self.dateLabel.layer.cornerRadius = 3.f;
     self.dateLabel.textColor = self.textColor;
     
+    self.markerView.backgroundColor = self.backgroundColor;
+    
     self.todaySelectedTextColor = [UIColor whiteColor];
 }
 
@@ -34,6 +36,7 @@
     [super prepareForReuse];
 
     self.today = NO;
+    
     [self.markerView removeMarkers];
 }
 
