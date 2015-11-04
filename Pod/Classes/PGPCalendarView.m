@@ -134,6 +134,17 @@
 }
 
 /* */
+- (void)setUserNavigationEnabled:(BOOL)userNavigationEnabled {
+    if (_userNavigationEnabled != userNavigationEnabled) {
+        _userNavigationEnabled = userNavigationEnabled;
+        
+        self.moveBackwardButton.hidden = !_userNavigationEnabled;
+        self.moveForwardButton.hidden = !_userNavigationEnabled;
+        self.collectionView.scrollEnabled = _userNavigationEnabled;
+    }
+}
+
+/* */
 - (void)tintColorDidChange {
     self.moveBackwardButton.tintColor = [self.tintColor colorWithAlphaComponent:0.65];
     self.moveForwardButton.tintColor = [self.tintColor colorWithAlphaComponent:0.65];
@@ -173,8 +184,10 @@
 
 /* */
 - (void)baseInit {
-    _calendarController = [[PGPCalendarController alloc] init];
     _borderColor = [UIColor colorWithWhite:0.95 alpha:1.f];
+    _calendarController = [[PGPCalendarController alloc] init];
+    _displayMode = PGPCalendarViewDisplayModeTwoWeeks;
+    _userNavigationEnabled = YES;
     
     _monthFormatter = [[NSDateFormatter alloc] init];
 
@@ -265,7 +278,7 @@
     NSDate *date = nil;
     
     CGPoint lastPoint = CGPointMake(self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.bounds),
-                                   self.collectionView.contentOffset.y + CGRectGetHeight(self.collectionView.bounds) / 2.f);
+                                   self.collectionView.contentOffset.y + CGRectGetHeight(self.collectionView.bounds) / [self numberOfRowsPerPageForDisplayMode:self.displayMode]);
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:lastPoint];
     if (indexPath) {
         date = [self.calendarController dateAtIndexPath:indexPath];
@@ -275,12 +288,22 @@
 }
 
 /* */
+- (CGFloat)numberOfDatesPerPageForDisplayMode:(enum PGPCalendarViewDisplayMode)mode {
+    return mode == PGPCalendarViewDisplayModeOneWeek ? 7 : 14;
+}
+
+/* */
+- (CGFloat)numberOfRowsPerPageForDisplayMode:(enum PGPCalendarViewDisplayMode)mode {
+    return mode == PGPCalendarViewDisplayModeOneWeek ? 1 : 2;
+}
+
+/* */
 - (void)selectItemAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
     // If paging is enabled, we have to be careful about where we tell the collection view to scroll
     // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
     // next tap on the collection view will scroll the cell out of view.
     UICollectionViewScrollPosition scrollPosition = UICollectionViewScrollPositionTop;
-    if (self.collectionView.pagingEnabled && indexPath.row % 14 > 6) {
+    if (self.collectionView.pagingEnabled && indexPath.row % (NSInteger)[self numberOfDatesPerPageForDisplayMode:self.displayMode] > 6) {
         // Determining the scroll position here works because we know we're showing 14 cells (2 x 7 grid).
         scrollPosition = UICollectionViewScrollPositionBottom;
     }
@@ -364,7 +387,7 @@
 
 /* */
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.pageSize.width / 7.f, self.pageSize.height / 2.f);
+    return CGSizeMake(self.pageSize.width / 7.f, self.pageSize.height / [self numberOfRowsPerPageForDisplayMode:self.displayMode]);
 }
 
 #pragma mark -

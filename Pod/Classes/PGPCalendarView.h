@@ -10,11 +10,20 @@
 
 @protocol PGPCalendarViewDelegate, PGPCalendarViewDataSource;
 
+typedef NS_ENUM(NSInteger, PGPCalendarViewDisplayMode) {
+    PGPCalendarViewDisplayModeOneWeek = 0,
+    PGPCalendarViewDisplayModeTwoWeeks
+};
+
 @interface PGPCalendarView : UIView
+
+@property (nonatomic) BOOL userNavigationEnabled;
 
 @property (nonatomic, weak) IBOutlet id<PGPCalendarViewDelegate> delegate;
 
 @property (nonatomic, weak) IBOutlet id<PGPCalendarViewDataSource> dataSource;
+
+@property (nonatomic) enum PGPCalendarViewDisplayMode displayMode;
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
