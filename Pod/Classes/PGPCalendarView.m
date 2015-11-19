@@ -19,6 +19,8 @@
 
 @property (nonatomic) CGSize pageSize;
 
+@property (nonatomic, strong) NSDate *draggingStartDate;
+
 @property (nonatomic, strong) NSDateFormatter *monthFormatter;
 
 @property (nonatomic, strong) PGPCalendarController *calendarController;
@@ -155,8 +157,8 @@
 
 /* */
 - (IBAction)moveBackward:(id)sender {
-    CGPoint backPoint = CGPointMake(self.collectionView.contentOffset.x,
-                                    self.collectionView.contentOffset.y - self.pageSize.height);
+    CGPoint backPoint = CGPointMake(CGRectGetMaxX(self.collectionView.bounds),
+                                    self.collectionView.contentOffset.y - 1.f);
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:backPoint];
     if (indexPath) {
         NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
@@ -394,22 +396,35 @@
 #pragma mark UIScrollViewDelegate
 
 /* */
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    self.draggingStartDate = [self firstVisibleDate];
+}
+
+/* */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:self.collectionView.contentOffset];
-    if (indexPath) {
-        NSDate *startDate = [self.calendarController dateAtIndexPath:indexPath];
-        if (startDate == nil) {
-            startDate = self.calendarController.startDate;
-        }
-        
-        [self updateMonthLabelForStartDate:startDate endDate:[self lastVisibleDate]];
-
-        [self setSelectedDate:startDate animated:NO];
-
-        if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
-            [self.delegate calendarView:self didSelectDate:startDate];
-        }
+    NSDate *proposedSelectedDate = [self firstVisibleDate];
+    if (proposedSelectedDate == nil) {
+        proposedSelectedDate = self.calendarController.startDate;
     }
+    
+    if ([self.draggingStartDate isEqual:proposedSelectedDate]) {
+        // We didn't actually change pages. Don't change the selected date.
+        return;
+    }
+    
+    if (self.draggingStartDate && [proposedSelectedDate compare:self.draggingStartDate] == NSOrderedAscending) {
+        proposedSelectedDate = [self lastVisibleDate];
+    }
+
+    [self updateMonthLabelForStartDate:[self firstVisibleDate] endDate:[self lastVisibleDate]];
+    
+    [self setSelectedDate:proposedSelectedDate animated:NO];
+
+    if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+        [self.delegate calendarView:self didSelectDate:proposedSelectedDate];
+    }
+
+    self.draggingStartDate = nil;
 }
 
 /* */
