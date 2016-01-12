@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, PGPCalendarViewDisplayMode) {
 
 @property (nonatomic, strong) NSDate *selectedDate;
 
+@property (nonatomic, strong) UICollectionView *collectionView;
+
 @property (nonatomic, readonly) UILabel *monthLabel;
 
 /*

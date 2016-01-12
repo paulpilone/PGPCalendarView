@@ -27,8 +27,6 @@
 
 @property (nonatomic, strong) PGPCalendarHeaderView *headerView;
 
-@property (nonatomic, strong) UICollectionView *collectionView;
-
 @property (nonatomic, strong) UIView *borderView;
 
 /* Navigation views */
@@ -68,6 +66,11 @@
     }
     
     return self;
+}
+
+/* */
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"collectionView.bounds"];
 }
 
 /* */
@@ -209,6 +212,20 @@
 }
 
 #pragma mark -
+#pragma mark KVO
+
+/* */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([object isEqual:self] && [keyPath isEqualToString:@"collectionView.bounds"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Force our collection layout to recalculate item size
+            // if the size of our collection view changes.
+            [self.collectionView.collectionViewLayout invalidateLayout];
+        });
+    }
+}
+
+#pragma mark -
 #pragma mark Private
 
 /* */
@@ -289,6 +306,11 @@
     NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([PGPCalendarViewCell class]) bundle:calendarBundle];
     [_collectionView registerNib:nib forCellWithReuseIdentifier:PGPCalendarViewCellIdentifier];
+    
+    // We derive item size from the frame of our collection view.
+    // If the size of our collection view changes, we must recalculate
+    // item sizes and invalidate our layout.
+    [self addObserver:self forKeyPath:@"collectionView.bounds" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 /* */
