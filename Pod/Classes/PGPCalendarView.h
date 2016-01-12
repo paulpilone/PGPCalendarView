@@ -12,7 +12,8 @@
 
 typedef NS_ENUM(NSInteger, PGPCalendarViewDisplayMode) {
     PGPCalendarViewDisplayModeOneWeek = 0,
-    PGPCalendarViewDisplayModeTwoWeeks
+    PGPCalendarViewDisplayModeTwoWeeks,
+    PGPCalendarViewDisplayModeOneMonth
 };
 
 @interface PGPCalendarView : UIView
@@ -24,6 +25,8 @@ typedef NS_ENUM(NSInteger, PGPCalendarViewDisplayMode) {
 @property (nonatomic, weak) IBOutlet id<PGPCalendarViewDataSource> dataSource;
 
 @property (nonatomic) enum PGPCalendarViewDisplayMode displayMode;
+
+@property (nonatomic, readonly) NSCalendar *calendar;
 
 @property (nonatomic, strong) NSDate *selectedDate;
 

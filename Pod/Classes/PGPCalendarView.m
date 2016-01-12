@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong) PGPCalendarController *calendarController;
 
+@property (nonatomic, strong) PGPCalendarHeaderView *headerView;
+
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) UIView *borderView;
@@ -36,6 +38,8 @@
 @property (nonatomic, strong) UIButton *moveForwardButton;
 
 @property (nonatomic, readwrite) UILabel *monthLabel;
+
+@property (nonatomic, strong) UIView *navigationView;
 
 @end
 
@@ -64,6 +68,11 @@
     }
     
     return self;
+}
+
+/* */
+- (NSCalendar *)calendar {
+    return self.calendarController.calendar;
 }
 
 /* */
@@ -100,6 +109,16 @@
     if (indexPath) {
         [self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
     }
+}
+
+/* */
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor:backgroundColor];
+    
+    self.collectionView.backgroundColor = backgroundColor;
+    self.headerView.backgroundColor = backgroundColor;
+    self.monthLabel.backgroundColor = backgroundColor;
+    self.navigationView.backgroundColor = backgroundColor;
 }
 
 /* */
@@ -157,13 +176,17 @@
 
 /* */
 - (IBAction)moveBackward:(id)sender {
-    CGPoint backPoint = CGPointMake(CGRectGetMaxX(self.collectionView.bounds),
+    CGPoint backPoint = CGPointMake(CGRectGetMaxX(self.collectionView.bounds) - 1,
                                     self.collectionView.contentOffset.y - 1.f);
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:backPoint];
     if (indexPath) {
         NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
         if (date) {
             [self setSelectedDate:date animated:YES];
+            
+            if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+                [self.delegate calendarView:self didSelectDate:date];
+            }
         }
     }
 }
@@ -177,6 +200,10 @@
         NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
         if (date) {
             [self setSelectedDate:date animated:YES];
+            
+            if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+                [self.delegate calendarView:self didSelectDate:date];
+            }
         }
     }
 }
@@ -196,39 +223,40 @@
     _needsFirstLayoutPass = YES;
     _selectedDate = _calendarController.startDate;
     
-    UIView *navigationView = [[UIView alloc] init];
-    navigationView.backgroundColor = self.backgroundColor;
-    navigationView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:navigationView];
+    _navigationView = [[UIView alloc] init];
+    _navigationView.backgroundColor = self.backgroundColor;
+    _navigationView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:_navigationView];
     
     _moveBackwardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _moveBackwardButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_moveBackwardButton addTarget:self action:@selector(moveBackward:) forControlEvents:UIControlEventTouchUpInside];
     [_moveBackwardButton setImage:[UIImage imageNamed:@"PGPCalendarView.bundle/HWCollapseArrow"] forState:UIControlStateNormal];
-    [navigationView addSubview:_moveBackwardButton];
+    [_navigationView addSubview:_moveBackwardButton];
 
     _monthLabel = [[UILabel alloc] init];
     _monthLabel.backgroundColor = self.backgroundColor;
+    _monthLabel.minimumScaleFactor = 0.75;
     _monthLabel.textAlignment = NSTextAlignmentCenter;
     _monthLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [navigationView addSubview:_monthLabel];
+    [_navigationView addSubview:_monthLabel];
 
     _moveForwardButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _moveForwardButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_moveForwardButton addTarget:self action:@selector(moveForward:) forControlEvents:UIControlEventTouchUpInside];
     [_moveForwardButton setImage:[UIImage imageNamed:@"PGPCalendarView.bundle/HWExpandArrow"] forState:UIControlStateNormal];
-    [navigationView addSubview:_moveForwardButton];
+    [_navigationView addSubview:_moveForwardButton];
     
     CGFloat buttonWidth = 36.f;
     NSDictionary *views = NSDictionaryOfVariableBindings(_moveBackwardButton, _monthLabel, _moveForwardButton);
-    [navigationView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_moveBackwardButton(buttonWidth)]-[_monthLabel]-[_moveForwardButton(buttonWidth)]-|" options:(NSLayoutFormatAlignAllBottom | NSLayoutFormatAlignAllTop) metrics:@{ @"buttonWidth" : @(buttonWidth) } views:views]];
-    [navigationView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[_monthLabel]-2-|" options:0 metrics:nil views:views]];
-    [self addSubview:navigationView];
+    [_navigationView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[_moveBackwardButton(buttonWidth)]-[_monthLabel]-[_moveForwardButton(buttonWidth)]-|" options:(NSLayoutFormatAlignAllBottom | NSLayoutFormatAlignAllTop) metrics:@{ @"buttonWidth" : @(buttonWidth) } views:views]];
+    [_navigationView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[_monthLabel]-2-|" options:0 metrics:nil views:views]];
+    [self addSubview:_navigationView];
     
-    PGPCalendarHeaderView *headerView = [[PGPCalendarHeaderView alloc] initWithWeekdaySymbols:self.calendarController.shortWeekdaySymbols];
-    headerView.backgroundColor = self.backgroundColor;
-    headerView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:headerView];
+    _headerView = [[PGPCalendarHeaderView alloc] initWithWeekdaySymbols:self.calendarController.shortWeekdaySymbols];
+    _headerView.backgroundColor = self.backgroundColor;
+    _headerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:_headerView];
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumInteritemSpacing = 0.f;
@@ -250,12 +278,12 @@
     _borderView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_borderView];
     
-    views = NSDictionaryOfVariableBindings(navigationView, headerView, _collectionView, _borderView);
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[navigationView]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[headerView]|" options:0 metrics:nil views:views]];
+    views = NSDictionaryOfVariableBindings(_navigationView, _headerView, _collectionView, _borderView);
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_navigationView]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_headerView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_collectionView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_borderView]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[navigationView(32)][headerView(17)][_collectionView][_borderView(1)]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_navigationView(32)][_headerView(17)][_collectionView][_borderView(1)]|" options:0 metrics:nil views:views]];
     
     NSString *calendarBundlePath = [[NSBundle mainBundle] pathForResource:@"PGPCalendarView" ofType:@"bundle"];
     NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
@@ -279,8 +307,8 @@
 - (NSDate *)lastVisibleDate {
     NSDate *date = nil;
     
-    CGPoint lastPoint = CGPointMake(self.collectionView.contentOffset.x + CGRectGetWidth(self.collectionView.bounds),
-                                   self.collectionView.contentOffset.y + CGRectGetHeight(self.collectionView.bounds) / [self numberOfRowsPerPageForDisplayMode:self.displayMode]);
+    CGPoint lastPoint = CGPointMake(CGRectGetMaxX(self.bounds) - 1.f,
+                                    self.collectionView.contentOffset.y + CGRectGetHeight(self.collectionView.bounds) - 1);
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:lastPoint];
     if (indexPath) {
         date = [self.calendarController dateAtIndexPath:indexPath];
@@ -291,26 +319,62 @@
 
 /* */
 - (CGFloat)numberOfDatesPerPageForDisplayMode:(enum PGPCalendarViewDisplayMode)mode {
-    return mode == PGPCalendarViewDisplayModeOneWeek ? 7 : 14;
+    CGFloat dates;
+    
+    switch (self.displayMode) {
+        case PGPCalendarViewDisplayModeTwoWeeks:
+            dates = 14;
+            break;
+        case PGPCalendarViewDisplayModeOneMonth:
+            dates = 28;
+            break;
+        default:
+            dates = 7;
+    }
+    
+    return dates;
 }
 
 /* */
 - (CGFloat)numberOfRowsPerPageForDisplayMode:(enum PGPCalendarViewDisplayMode)mode {
-    return mode == PGPCalendarViewDisplayModeOneWeek ? 1 : 2;
+    CGFloat rows;
+    
+    switch (self.displayMode) {
+        case PGPCalendarViewDisplayModeTwoWeeks:
+            rows = 2;
+            break;
+        case PGPCalendarViewDisplayModeOneMonth:
+            rows = 4;
+            break;
+        default:
+            rows = 1;
+            break;
+    }
+    
+    return rows;
 }
 
 /* */
-- (void)selectItemAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
-    // If paging is enabled, we have to be careful about where we tell the collection view to scroll
-    // to. If the cell is in the second displayed week, we have to scroll it to the bottom. Otherwise the
-    // next tap on the collection view will scroll the cell out of view.
-    UICollectionViewScrollPosition scrollPosition = UICollectionViewScrollPositionTop;
-    if (self.collectionView.pagingEnabled && indexPath.row % (NSInteger)[self numberOfDatesPerPageForDisplayMode:self.displayMode] > 6) {
-        // Determining the scroll position here works because we know we're showing 14 cells (2 x 7 grid).
-        scrollPosition = UICollectionViewScrollPositionBottom;
+- (void)selectItemAtIndexPath:(NSIndexPath *)selectedIndexPath animated:(BOOL)animated {
+    if ([[self.collectionView indexPathsForVisibleItems] containsObject:selectedIndexPath]) {
+            [self.collectionView selectItemAtIndexPath:selectedIndexPath animated:animated scrollPosition:UICollectionViewScrollPositionNone];
+        return;
     }
     
-    [self.collectionView selectItemAtIndexPath:indexPath animated:animated scrollPosition:scrollPosition];
+    // Determine the page for the given index path.
+    NSInteger page = floor(selectedIndexPath.item / [self numberOfDatesPerPageForDisplayMode:self.displayMode]);
+    
+    // Get the first item (top left corner) on this page. We use this item as the target scroll index path
+    // so that we can always animate with a scroll position of 'top'.
+    NSIndexPath *targetScrollIndexPath = [self.collectionView indexPathForItemAtPoint:CGPointMake(0.f, page * self.pageSize.height)];
+    
+    UICollectionViewScrollPosition selectedIndexPathScrollPosition = UICollectionViewScrollPositionCenteredHorizontally;
+    if (targetScrollIndexPath) {
+        [self.collectionView scrollToItemAtIndexPath:targetScrollIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:animated];
+        selectedIndexPathScrollPosition = UICollectionViewScrollPositionNone;
+    }
+
+    [self.collectionView selectItemAtIndexPath:selectedIndexPath animated:animated scrollPosition:selectedIndexPathScrollPosition];
 }
 
 /* */
@@ -358,7 +422,7 @@
         cell.today = [self.calendarController isToday:date];
         cell.selected = [date isEqual:self.selectedDate];
         
-        NSDateComponents *dateComps = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
+        NSDateComponents *dateComps = [self.calendarController.calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
         cell.dateLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
         
         cell.markers = [self.dataSource calendarView:self markersForDate:date];
