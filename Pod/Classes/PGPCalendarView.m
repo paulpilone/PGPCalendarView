@@ -15,6 +15,8 @@
 
 @interface PGPCalendarView () < UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout >
 
+@property (nonatomic) BOOL trackingPotentialGoToDateTap;
+
 @property (nonatomic) BOOL needsFirstLayoutPass;
 
 @property (nonatomic) CGSize pageSize;
@@ -42,6 +44,8 @@
 @end
 
 @implementation PGPCalendarView
+
+static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
 
 /* */
 - (instancetype)init {
@@ -233,6 +237,7 @@
     _borderColor = [UIColor colorWithWhite:0.95 alpha:1.f];
     _calendarController = [[PGPCalendarController alloc] init];
     _displayMode = PGPCalendarViewDisplayModeTwoWeeks;
+    _trackingPotentialGoToDateTap = NO;
     _userNavigationEnabled = YES;
     
     _monthFormatter = [[NSDateFormatter alloc] init];
@@ -417,6 +422,50 @@
     } else {
         [self.monthFormatter setDateFormat:@"MMMM yyyy"];
         self.monthLabel.text = [self.monthFormatter stringFromDate:startDate];
+    }
+}
+
+#pragma mark -
+#pragma mark UIContrl
+
+/* */
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    if (CGRectContainsPoint(self.monthLabel.frame, [touch locationInView:self])) {
+        self.trackingPotentialGoToDateTap = YES;
+        [UIView animateWithDuration:PGPCalendarViewGoToDateAnimationDuration animations:^{
+            self.monthLabel.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        }];
+    }
+}
+
+/* */
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.trackingPotentialGoToDateTap) {
+        self.trackingPotentialGoToDateTap = NO;
+        [UIView animateWithDuration:PGPCalendarViewGoToDateAnimationDuration animations:^{
+            self.monthLabel.transform = CGAffineTransformIdentity;
+        }];
+        
+        UITouch *touch = [touches anyObject];
+        if (CGRectContainsPoint(self.monthLabel.frame, [touch locationInView:self])) {
+            NSDate *proposedDate = [NSDate date];
+            [self setSelectedDate:proposedDate animated:YES];
+            
+            if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
+                [self.delegate calendarView:self didSelectDate:proposedDate];
+            }
+        }
+    }
+}
+
+/* */
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.trackingPotentialGoToDateTap) {
+        self.trackingPotentialGoToDateTap = NO;
+        [UIView animateWithDuration:PGPCalendarViewGoToDateAnimationDuration animations:^{
+            self.monthLabel.transform = CGAffineTransformIdentity;
+        }];
     }
 }
 
