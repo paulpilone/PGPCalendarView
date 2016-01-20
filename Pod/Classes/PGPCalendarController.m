@@ -14,7 +14,7 @@
 
 @property (nonatomic, readwrite) NSCalendar *calendar;
 
-@property (nonatomic, strong) NSDateFormatter *dateFormatter;
+@property (nonatomic, readwrite) NSDateFormatter *dateFormatter;
 
 @property (nonatomic, readwrite) NSDate *endDate;
 
@@ -111,20 +111,20 @@
         
         // We'll subtract 1 from our offset so that 'Sunday' appears as 0. This makes
         // calculations for our purposes easier.
-        _startDateWeekdayOffset = calendarWeekday - 1;
+        _startDateWeekdayOffset = calendarWeekday - self.calendar.firstWeekday;
     }
     
     return _startDateWeekdayOffset ;
 }
 
-/* */
+/* FIXME: Alternate implementation: assume first weekday is Sunday. Offset based on actual first weekday and just access the formatter's array. */
 - (NSArray *)shortWeekdaySymbols {
     NSMutableArray *mutableWeekdaySymbols = [NSMutableArray array];
 
     NSUInteger zeroIndexFirstWeekday = self.calendar.firstWeekday - 1;
     NSArray *defaultWeekdaySymbols = self.dateFormatter.shortWeekdaySymbols;
     
-    [mutableWeekdaySymbols addObjectsFromArray:[defaultWeekdaySymbols subarrayWithRange:NSMakeRange(zeroIndexFirstWeekday, [defaultWeekdaySymbols count])]];
+    [mutableWeekdaySymbols addObjectsFromArray:[defaultWeekdaySymbols subarrayWithRange:NSMakeRange(zeroIndexFirstWeekday, [defaultWeekdaySymbols count] - zeroIndexFirstWeekday)]];
     [mutableWeekdaySymbols addObjectsFromArray:[defaultWeekdaySymbols subarrayWithRange:NSMakeRange(0, zeroIndexFirstWeekday)]];
     
     return mutableWeekdaySymbols;
