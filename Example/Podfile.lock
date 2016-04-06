@@ -1,14 +1,14 @@
 PODS:
-  - PGPCalendarView (0.1.0)
+  - PGPCalendarView (0.1.1)
 
 DEPENDENCIES:
   - PGPCalendarView (from `../`)
 
 EXTERNAL SOURCES:
   PGPCalendarView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  PGPCalendarView: c6d0d51296a4600a881d34c769d4a40b32cff613
+  PGPCalendarView: aafafc0520db53cce10563e441c0d7a8ea0cb17b
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.39.0

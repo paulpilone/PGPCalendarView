@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="PGPXCalendarViewItemView">
+            <rect key="frame" x="0.0" y="0.0" width="44" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-Ym-jLR" customClass="PGPXDateCalloutTextField">
+                    <rect key="frame" x="2" y="21" width="41" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="UxD-Fb-r0C"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="vrp-DU-U1Q">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="YC8-9T-ap3" name="value" keyPath="self.representedObject" id="Vqo-dy-fPN"/>
+                    </connections>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="IA8-45-eAi" customClass="PGPXMarkerView">
+                    <rect key="frame" x="5" y="2" width="34" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="hQD-zz-aBu"/>
+                        <constraint firstAttribute="height" constant="18" id="prD-Zp-H6P"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="sKr-Ym-jLR" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="2" id="C83-Sr-8aB"/>
+                <constraint firstItem="IA8-45-eAi" firstAttribute="top" secondItem="sKr-Ym-jLR" secondAttribute="bottom" constant="1" id="JcU-yD-fux"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sKr-Ym-jLR" secondAttribute="trailing" id="blM-hC-MRA"/>
+                <constraint firstItem="sKr-Ym-jLR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c22-O7-iKe" secondAttribute="leading" id="cH3-B9-8E0"/>
+                <constraint firstItem="IA8-45-eAi" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="lQr-fL-Ffb"/>
+                <constraint firstItem="sKr-Ym-jLR" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="pVq-Xb-tu0"/>
+            </constraints>
+            <connections>
+                <outlet property="dateField" destination="sKr-Ym-jLR" id="HCl-kM-CsU"/>
+                <outlet property="markerView" destination="IA8-45-eAi" id="VCo-hx-Su2"/>
+            </connections>
+            <point key="canvasLocation" x="277" y="396"/>
+        </customView>
+        <collectionViewItem id="YC8-9T-ap3" customClass="PGPXCalendarViewItem">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="Idb-Ji-eTf"/>
+            </connections>
+        </collectionViewItem>
+        <userDefaultsController representsSharedInstance="YES" id="569-tl-sH6"/>
+    </objects>
+</document>

@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) NSDate *draggingStartDate;
 
+@property (nonatomic, strong) NSDateFormatter *dayAccessibilityDateFormatter;
+
 @property (nonatomic, strong) NSDateFormatter *monthFormatter;
 
 @property (nonatomic, strong) PGPCalendarController *calendarController;
@@ -241,7 +243,11 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     _userNavigationEnabled = YES;
     
     _monthFormatter = [[NSDateFormatter alloc] init];
-
+    
+    NSString *localizedDateFormat = [NSDateFormatter dateFormatFromTemplate:@"EEEE, MMMM d" options:0 locale:[NSLocale currentLocale]];
+    _dayAccessibilityDateFormatter = [[NSDateFormatter alloc] init];
+    [_dayAccessibilityDateFormatter setDateFormat:localizedDateFormat];
+    
     _needsFirstLayoutPass = YES;
     _selectedDate = _calendarController.startDate;
     
@@ -251,6 +257,7 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     [self addSubview:_navigationView];
     
     _moveBackwardButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _moveBackwardButton.accessibilityLabel = NSLocalizedString(@"Previous month", nil);
     _moveBackwardButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_moveBackwardButton addTarget:self action:@selector(moveBackward:) forControlEvents:UIControlEventTouchUpInside];
     [_moveBackwardButton setImage:[UIImage imageNamed:@"PGPCalendarView.bundle/HWCollapseArrow"] forState:UIControlStateNormal];
@@ -264,6 +271,7 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     [_navigationView addSubview:_monthLabel];
 
     _moveForwardButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _moveForwardButton.accessibilityLabel = NSLocalizedString(@"Next month", nil);
     _moveForwardButton.translatesAutoresizingMaskIntoConstraints = NO;
     [_moveForwardButton addTarget:self action:@selector(moveForward:) forControlEvents:UIControlEventTouchUpInside];
     [_moveForwardButton setImage:[UIImage imageNamed:@"PGPCalendarView.bundle/HWExpandArrow"] forState:UIControlStateNormal];
@@ -426,7 +434,7 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
 }
 
 #pragma mark -
-#pragma mark UIContrl
+#pragma mark UIControl
 
 /* */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -488,6 +496,7 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     
     NSDate *date = [self.calendarController dateAtIndexPath:indexPath];
     if (date == nil) { // Placeholder cell.
+        cell.accessibilityLabel = nil;
         cell.dateLabel.text = nil;
     } else {
         cell.today = [self.calendarController isToday:date];
@@ -496,7 +505,11 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
         NSDateComponents *dateComps = [self.calendarController.calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)  fromDate:date];
         cell.dateLabel.text = [NSString stringWithFormat:@"%ld", (long) [dateComps day]];
         
-        cell.markers = [self.dataSource calendarView:self markersForDate:date];
+        NSArray *markers = [self.dataSource calendarView:self markersForDate:date];
+        cell.markers = markers;
+        
+        NSString *accessibilityLabel = [NSString stringWithFormat:@"%@, %ld items", [self.dayAccessibilityDateFormatter stringFromDate:date], (long)[markers count]];
+        cell.accessibilityLabel = accessibilityLabel;
     }
     
     return cell;

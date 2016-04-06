@@ -205,6 +205,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				3A2798E5FAD94383A0D4F82C /* Copy Pods Resources */,
+				636AF2FC43C61B344E7936EE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +225,7 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				E665F6BC8B7705EC00F0F480 /* Copy Pods Resources */,
+				EB9139A90730FA5A91E1262D /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +323,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGPCalendarView_Example/Pods-PGPCalendarView_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		636AF2FC43C61B344E7936EE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGPCalendarView_Example/Pods-PGPCalendarView_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7B0E37A501C4BD301358537D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,6 +366,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGPCalendarView_Tests/Pods-PGPCalendarView_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9139A90730FA5A91E1262D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGPCalendarView_Tests/Pods-PGPCalendarView_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

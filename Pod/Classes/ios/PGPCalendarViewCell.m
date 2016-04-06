@@ -32,6 +32,16 @@
 }
 
 /* */
+- (BOOL)isAccessibilityElement {
+    return YES;
+}
+
+/* */
+- (UIAccessibilityTraits)accessibilityTraits {
+    return UIAccessibilityTraitButton;
+}
+
+/* */
 - (void)prepareForReuse {
     [super prepareForReuse];
 

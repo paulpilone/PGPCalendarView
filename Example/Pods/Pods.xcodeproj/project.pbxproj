@@ -1,2137 +1,773 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>039D2E2919410AB3D62CDA28</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3D9DBCFE04748D97B49B155E</string>
-				<string>8D7ACAC87E393B924DDEC8FE</string>
-				<string>675E81D5EBB4BA15CFB6B0AC</string>
-				<string>AB3B0FFD85B80BE14C5F1BAA</string>
-				<string>8F6E9079D6908A2F3AC37B14</string>
-				<string>6C9CB2BA5279682EE0E70322</string>
-				<string>ED3B0C7DA8DC5B309F8B1AA7</string>
-				<string>F7875BA7A3C41770305A7438</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Pods-PGPCalendarView_Example-PGPCalendarView</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>05B08B6354290B67732210E1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E27E47CAF2FEEF3FC2E09AE8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>06364A6E9797DA7DE90CA7A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FA7672247CC93BACEE8F2C39</string>
-				<string>A88B1235EB63BA6924C74521</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>07129D936AF1F5F4DDAF0B42</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PGPCalendarHeaderView.m</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarHeaderView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0FC4DB2A68087718E89749DF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>10DEEE819E596EFD8DDB2182</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>10F797812437AD1A04F6A03B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FB728CE234F7BAFBAA2BC93A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>12C4C57062468218A278CDAC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14E50910D9888C9773A473F9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>PGPCalendarView</string>
-			<key>target</key>
-			<string>478C148BC5380D179EC437A6</string>
-			<key>targetProxy</key>
-			<string>311B3562073224BE8950439A</string>
-		</dict>
-		<key>17714492F292A601C3F9AFFB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>337B03F55ACE7BA14A59D6EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>17E52C9A2629ED3E52F068B6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>07129D936AF1F5F4DDAF0B42</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1C77D3D9E1A4EBE239420134</key>
-		<dict>
-			<key>fileRef</key>
-			<string>66AE07CF9667EA108A4038ED</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1D37ABE219DECC332946DAFC</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>9179AB74D6208796A640B8F5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>478C148BC5380D179EC437A6</string>
-			<key>remoteInfo</key>
-			<string>PGPCalendarView</string>
-		</dict>
-		<key>1ED427A7AFBB3909C31D0CF7</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>206C77485251207CE6F8D04F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>337B03F55ACE7BA14A59D6EF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>20CD3872D84161E70DAA840E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>66AE07CF9667EA108A4038ED</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>21212E16823230FB6837B76F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>25599E54C5AB7086C752EF5F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>23B7C55397C7939B13F06B8F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C20A9B12073E7AA4CAF6C891</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>25599E54C5AB7086C752EF5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PGPCalendarViewCell.m</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>25CE6491FAB7EDFD136074E2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3576C11EB5415E9EB001C12A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>26CBC33CF9367B019C033C49</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BD1312DBA97188343F4B0A33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2D0461BA0948506FD07C7D12</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView</string>
-			<key>target</key>
-			<string>D4CBDED07ABD47AF7CE186C8</string>
-			<key>targetProxy</key>
-			<string>947E797D7D9F0EBDA4996F63</string>
-		</dict>
-		<key>2FEDC0F60061F8181B57C61D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSDate+PGPCalendarViewAdditions.h</string>
-			<key>path</key>
-			<string>Pod/Classes/NSDate+PGPCalendarViewAdditions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>311B3562073224BE8950439A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>9179AB74D6208796A640B8F5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>478C148BC5380D179EC437A6</string>
-			<key>remoteInfo</key>
-			<string>PGPCalendarView</string>
-		</dict>
-		<key>3216ABFEEF731E57A64EF675</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-PGPCalendarView_Tests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>32898F70406C1AE9F21E8342</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EDC2811847812D1A8B13AF95</string>
-				<string>84DAF98CFC6BA2AAC48C0B08</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>32E952BFA0A4DCD86DB2018C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PGPCalendarView.m</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>337B03F55ACE7BA14A59D6EF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PGPCalendarHeaderView.h</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarHeaderView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3576C11EB5415E9EB001C12A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3B73FACD46E2FD6701FE13F2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3B73FACD46E2FD6701FE13F2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C200E72FBD40FD6861692FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>PGPCalendarHeaderView.xib</string>
-			<key>path</key>
-			<string>Pod/Assets/PGPCalendarHeaderView.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3C340AF22411430C75871C15</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B0265710493C40583920440</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3D9DBCFE04748D97B49B155E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F6C0BC4DB4226B646E5F19E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8B3116D374BA5C9EE5836716</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>432BC81AE6E9EB8F9A26CEDE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>64DA457A831A3560706A1B31</string>
-				<string>B2BC48EF51AC717D60899102</string>
-				<string>C265A2DB3D015CA28AEAB966</string>
-				<string>CF0DD074EB98D14A56C95E93</string>
-				<string>BDF10A94D96F128F141060CB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>432D9C9AAC63E5068F1B153E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8D7ACAC87E393B924DDEC8FE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PGPCalendarView_Example-PGPCalendarView/Pods-PGPCalendarView_Example-PGPCalendarView-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>434888AEF6FEEF7DD0D30F40</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>32898F70406C1AE9F21E8342</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E1B8832ECD44F16D1935B34C</string>
-				<string>B75E36E4303B62BD1341A44C</string>
-				<string>692D3B7213836BF2C71FD0A9</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>14E50910D9888C9773A473F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView</string>
-			<key>productName</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView</string>
-			<key>productReference</key>
-			<string>7CAB82B76BB2DAEB1FB40913</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>43D6C00137D048B391D6F94B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-PGPCalendarView_Example.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>455052E8A95ED9EA8718D64A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2FEDC0F60061F8181B57C61D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4618A901FD16313994B0A32A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EEFAB0261AD9A2AEDF9A3B37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>478C148BC5380D179EC437A6</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CE2F3B252429D4E4301DC460</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E9738E73B6633BC1F2C42D17</string>
-				<string>0FC4DB2A68087718E89749DF</string>
-				<string>06364A6E9797DA7DE90CA7A9</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>PGPCalendarView</string>
-			<key>productName</key>
-			<string>PGPCalendarView</string>
-			<key>productReference</key>
-			<string>81B3D578052270B9872B5042</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>4A51562AF55817B45855144D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4F13DAB3D3FBD29A56F23055</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>9AB42F38345911E0ADBF038B</string>
-				<string>9ED1C2F1B5150A4B66AC77FB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>59DCDFDEFEDD920727D96703</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>D04304592C51F64D83CA3E6E</string>
-			<key>buildPhases</key>
-			<array>
-				<string>25CE6491FAB7EDFD136074E2</string>
-				<string>B6EAEF13F5CB92858A873A74</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>2D0461BA0948506FD07C7D12</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Example</string>
-			<key>productName</key>
-			<string>Pods-PGPCalendarView_Example</string>
-			<key>productReference</key>
-			<string>43D6C00137D048B391D6F94B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>5D2589D3F59D689F2A142C31</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5EB2678825AD99D4C8DBB8B5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>675E81D5EBB4BA15CFB6B0AC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6034EAB22625594E0AB502BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>PGPCalendarViewCell.xib</string>
-			<key>path</key>
-			<string>Pod/Assets/PGPCalendarViewCell.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>609801CDE8B878976F18378A</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>614ECFAFDE36D97A32BBFC16</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B4535BD9F5C4943739605C26</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>64DA457A831A3560706A1B31</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>66AE07CF9667EA108A4038ED</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSDate+PGPCalendarViewAdditions.m</string>
-			<key>path</key>
-			<string>Pod/Classes/NSDate+PGPCalendarViewAdditions.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>675E81D5EBB4BA15CFB6B0AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>692D3B7213836BF2C71FD0A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FEA6E412D151A6F743E418D6</string>
-				<string>3F6C0BC4DB4226B646E5F19E</string>
-				<string>17714492F292A601C3F9AFFB</string>
-				<string>EAE9C4084A64937ECDEB6D5A</string>
-				<string>D4D043E1A0BAC939423228DD</string>
-				<string>4618A901FD16313994B0A32A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6A8B19A8776D2696740C8A36</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B0265710493C40583920440</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PGPCalendarMarkerContainerView.m</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarMarkerContainerView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6C9CB2BA5279682EE0E70322</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView-Private.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6DD28A6091C6921E5BB0F5F3</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6A8B19A8776D2696740C8A36</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>70C540ADE75F7EAAF5A758DF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EEFAB0261AD9A2AEDF9A3B37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7146CE3452A67E1078BE1FBC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7264F71F77DF4C70E6FF6EAB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1ED427A7AFBB3909C31D0CF7</string>
-				<string>609801CDE8B878976F18378A</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>73E5580FFE9658DA6E7CD02A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B4535BD9F5C4943739605C26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>760E3D9A2B5B5ED0E84D455A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>32E952BFA0A4DCD86DB2018C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>791DD9B134E2D8D6752AB02B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8D7ACAC87E393B924DDEC8FE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PGPCalendarView_Example-PGPCalendarView/Pods-PGPCalendarView_Example-PGPCalendarView-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7CAB82B76BB2DAEB1FB40913</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-PGPCalendarView_Tests-PGPCalendarView.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>804DCF13134DB453466CCE90</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>1C77D3D9E1A4EBE239420134</string>
-				<string>23B7C55397C7939B13F06B8F</string>
-				<string>9F59F76B46ADB50CADBAC0E0</string>
-				<string>3C340AF22411430C75871C15</string>
-				<string>F3AF8C02CE440EB7703DD16D</string>
-				<string>21212E16823230FB6837B76F</string>
-				<string>5EB2678825AD99D4C8DBB8B5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>81B3D578052270B9872B5042</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>PGPCalendarView.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8310553EB17E85F613369737</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B4535BD9F5C4943739605C26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>83434FFDCC70B0187B081835</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D0BAD6BB9268DBFE06CD2234</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>84DAF98CFC6BA2AAC48C0B08</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6C9CB2BA5279682EE0E70322</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8765E0BFD9FE8077B98F0E2A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F40802503F251A8772AE95AB</string>
-				<string>4A51562AF55817B45855144D</string>
-				<string>8961240D69725DAAD52C3AD2</string>
-				<string>7146CE3452A67E1078BE1FBC</string>
-				<string>12C4C57062468218A278CDAC</string>
-				<string>5D2589D3F59D689F2A142C31</string>
-				<string>A42B6C9144DBE8F3FB57595E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-PGPCalendarView_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8961240D69725DAAD52C3AD2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B3116D374BA5C9EE5836716</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PGPCalendarController.h</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D7ACAC87E393B924DDEC8FE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F6E9079D6908A2F3AC37B14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView.xcconfig</string>
-			<key>path</key>
-			<string>../Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9179AB74D6208796A640B8F5</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7264F71F77DF4C70E6FF6EAB</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>432BC81AE6E9EB8F9A26CEDE</string>
-			<key>productRefGroup</key>
-			<string>CF0DD074EB98D14A56C95E93</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>478C148BC5380D179EC437A6</string>
-				<string>59DCDFDEFEDD920727D96703</string>
-				<string>D4CBDED07ABD47AF7CE186C8</string>
-				<string>EC231AB567F7E993D821816A</string>
-				<string>434888AEF6FEEF7DD0D30F40</string>
-			</array>
-		</dict>
-		<key>943475E88A009B3BCFDC3F34</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2FEDC0F60061F8181B57C61D</string>
-				<string>66AE07CF9667EA108A4038ED</string>
-				<string>8B3116D374BA5C9EE5836716</string>
-				<string>C20A9B12073E7AA4CAF6C891</string>
-				<string>337B03F55ACE7BA14A59D6EF</string>
-				<string>07129D936AF1F5F4DDAF0B42</string>
-				<string>DD54A847EE63BFCA993564BB</string>
-				<string>6B0265710493C40583920440</string>
-				<string>BCE44BAB7A4D0E2AC2A3677C</string>
-				<string>32E952BFA0A4DCD86DB2018C</string>
-				<string>EEFAB0261AD9A2AEDF9A3B37</string>
-				<string>25599E54C5AB7086C752EF5F</string>
-				<string>A29268BAAD08052E0BCEBF47</string>
-				<string>039D2E2919410AB3D62CDA28</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>PGPCalendarView</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>947E797D7D9F0EBDA4996F63</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>9179AB74D6208796A640B8F5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D4CBDED07ABD47AF7CE186C8</string>
-			<key>remoteInfo</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView</string>
-		</dict>
-		<key>9AB42F38345911E0ADBF038B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>5D2589D3F59D689F2A142C31</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>9ED1C2F1B5150A4B66AC77FB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A42B6C9144DBE8F3FB57595E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>9F59F76B46ADB50CADBAC0E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>07129D936AF1F5F4DDAF0B42</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A28F59D76103424F4B8141B1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>25599E54C5AB7086C752EF5F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A29268BAAD08052E0BCEBF47</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3C200E72FBD40FD6861692FE</string>
-				<string>6034EAB22625594E0AB502BB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A42B6C9144DBE8F3FB57595E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A88B1235EB63BA6924C74521</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6034EAB22625594E0AB502BB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AB3B0FFD85B80BE14C5F1BAA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2BC48EF51AC717D60899102</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>943475E88A009B3BCFDC3F34</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B4535BD9F5C4943739605C26</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>B5423676D13D84AB4AF50ED2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B6EAEF13F5CB92858A873A74</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8310553EB17E85F613369737</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B75E36E4303B62BD1341A44C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>73E5580FFE9658DA6E7CD02A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B7B6EA4B1B8F84DC82E1BC36</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BBFC325393E7067E6FB0DE01</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DD54A847EE63BFCA993564BB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BCE44BAB7A4D0E2AC2A3677C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PGPCalendarView.h</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BD1312DBA97188343F4B0A33</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8961240D69725DAAD52C3AD2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BDF10A94D96F128F141060CB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EDB93480DEE67C047C3DCEFA</string>
-				<string>8765E0BFD9FE8077B98F0E2A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C10906485BB27E5BE2A495E9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>791DD9B134E2D8D6752AB02B</string>
-				<string>432D9C9AAC63E5068F1B153E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>C20A9B12073E7AA4CAF6C891</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>PGPCalendarController.m</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C265A2DB3D015CA28AEAB966</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>614ECFAFDE36D97A32BBFC16</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CC96BBAFD23E9A91AC016581</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8B3116D374BA5C9EE5836716</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CE2F3B252429D4E4301DC460</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DCA09BE3214DC9699A036D37</string>
-				<string>10DEEE819E596EFD8DDB2182</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CF0DD074EB98D14A56C95E93</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>81B3D578052270B9872B5042</string>
-				<string>43D6C00137D048B391D6F94B</string>
-				<string>F4B75B08064FA0D57EFCC191</string>
-				<string>3216ABFEEF731E57A64EF675</string>
-				<string>7CAB82B76BB2DAEB1FB40913</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D04304592C51F64D83CA3E6E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>10F797812437AD1A04F6A03B</string>
-				<string>6DD28A6091C6921E5BB0F5F3</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>D0BAD6BB9268DBFE06CD2234</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B4535BD9F5C4943739605C26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0D06F83969320A7846128F5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView</string>
-			<key>target</key>
-			<string>434888AEF6FEEF7DD0D30F40</string>
-			<key>targetProxy</key>
-			<string>D15CB72DBC7EB64236F412CF</string>
-		</dict>
-		<key>D15CB72DBC7EB64236F412CF</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>9179AB74D6208796A640B8F5</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>434888AEF6FEEF7DD0D30F40</string>
-			<key>remoteInfo</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView</string>
-		</dict>
-		<key>D1F3474C76DA2428612819EB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>455052E8A95ED9EA8718D64A</string>
-				<string>CC96BBAFD23E9A91AC016581</string>
-				<string>206C77485251207CE6F8D04F</string>
-				<string>BBFC325393E7067E6FB0DE01</string>
-				<string>F4C64D28927A4B2FE897681D</string>
-				<string>70C540ADE75F7EAAF5A758DF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D3FEE42E4543D2388D329862</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D4CBDED07ABD47AF7CE186C8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>C10906485BB27E5BE2A495E9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>804DCF13134DB453466CCE90</string>
-				<string>05B08B6354290B67732210E1</string>
-				<string>D1F3474C76DA2428612819EB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>D717D8D0570BA3836EB5353D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView</string>
-			<key>productName</key>
-			<string>Pods-PGPCalendarView_Example-PGPCalendarView</string>
-			<key>productReference</key>
-			<string>F4B75B08064FA0D57EFCC191</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>D4D043E1A0BAC939423228DD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BCE44BAB7A4D0E2AC2A3677C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D717D8D0570BA3836EB5353D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>PGPCalendarView</string>
-			<key>target</key>
-			<string>478C148BC5380D179EC437A6</string>
-			<key>targetProxy</key>
-			<string>1D37ABE219DECC332946DAFC</string>
-		</dict>
-		<key>DCA09BE3214DC9699A036D37</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>DD54A847EE63BFCA993564BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PGPCalendarMarkerContainerView.h</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarMarkerContainerView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E1B8832ECD44F16D1935B34C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>20CD3872D84161E70DAA840E</string>
-				<string>E329EBF1F211A4C2C6228CDF</string>
-				<string>17E52C9A2629ED3E52F068B6</string>
-				<string>E5264C6BCC89FD055FF6AC84</string>
-				<string>760E3D9A2B5B5ED0E84D455A</string>
-				<string>A28F59D76103424F4B8141B1</string>
-				<string>FF84E9F885242A8201F7DB35</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E27E47CAF2FEEF3FC2E09AE8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B4535BD9F5C4943739605C26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E329EBF1F211A4C2C6228CDF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C20A9B12073E7AA4CAF6C891</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5264C6BCC89FD055FF6AC84</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B0265710493C40583920440</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E9738E73B6633BC1F2C42D17</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EAE9C4084A64937ECDEB6D5A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DD54A847EE63BFCA993564BB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EC231AB567F7E993D821816A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>4F13DAB3D3FBD29A56F23055</string>
-			<key>buildPhases</key>
-			<array>
-				<string>26CBC33CF9367B019C033C49</string>
-				<string>83434FFDCC70B0187B081835</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>D0D06F83969320A7846128F5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests</string>
-			<key>productName</key>
-			<string>Pods-PGPCalendarView_Tests</string>
-			<key>productReference</key>
-			<string>3216ABFEEF731E57A64EF675</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>ED3B0C7DA8DC5B309F8B1AA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView-dummy.m</string>
-			<key>path</key>
-			<string>../Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EDB93480DEE67C047C3DCEFA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B7B6EA4B1B8F84DC82E1BC36</string>
-				<string>B5423676D13D84AB4AF50ED2</string>
-				<string>3B73FACD46E2FD6701FE13F2</string>
-				<string>D3FEE42E4543D2388D329862</string>
-				<string>F270EAAE7BBCDCA9AA8F006B</string>
-				<string>FB728CE234F7BAFBAA2BC93A</string>
-				<string>6A8B19A8776D2696740C8A36</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-PGPCalendarView_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EDC2811847812D1A8B13AF95</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6C9CB2BA5279682EE0E70322</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.1</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EEFAB0261AD9A2AEDF9A3B37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PGPCalendarViewCell.h</string>
-			<key>path</key>
-			<string>Pod/Classes/PGPCalendarViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F270EAAE7BBCDCA9AA8F006B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F3AF8C02CE440EB7703DD16D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>32E952BFA0A4DCD86DB2018C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F40802503F251A8772AE95AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Tests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F4B75B08064FA0D57EFCC191</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-PGPCalendarView_Example-PGPCalendarView.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F4C64D28927A4B2FE897681D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BCE44BAB7A4D0E2AC2A3677C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F7875BA7A3C41770305A7438</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Pods-PGPCalendarView_Tests-PGPCalendarView-prefix.pch</string>
-			<key>path</key>
-			<string>../Pods-PGPCalendarView_Tests-PGPCalendarView/Pods-PGPCalendarView_Tests-PGPCalendarView-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FA7672247CC93BACEE8F2C39</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C200E72FBD40FD6861692FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FB728CE234F7BAFBAA2BC93A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-PGPCalendarView_Example.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FEA6E412D151A6F743E418D6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2FEDC0F60061F8181B57C61D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FF84E9F885242A8201F7DB35</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ED3B0C7DA8DC5B309F8B1AA7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>9179AB74D6208796A640B8F5</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1229C30B01B20344E85F7A5B206DD4C9 /* Pods-PGPCalendarView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D191743D889F38814F410E412FEDAEB /* Pods-PGPCalendarView_Tests-dummy.m */; };
+		1E39B51C51F43399531461092689F8DE /* PGPCalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6896386728C15AF6D8CD6483494AAD60 /* PGPCalendarHeaderView.xib */; };
+		2903AD986EA16D5188778AE24B5115D9 /* HWCollapseArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1D6B45625848D24C8B352C91330226 /* HWCollapseArrow@2x.png */; };
+		310FC86FDE0793C0B80E0ACBAAB0A798 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		41EF14D0F0FEA198497300DBCFE11A74 /* HWCollapseArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 332F83134E8A5BB2896A7061C37B805C /* HWCollapseArrow.png */; };
+		4890EAB80EEF77C7387B52E4D755E039 /* PGPCalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7789068EC9A4E9E02EDDCB1C12698BA /* PGPCalendarController.m */; };
+		4D250E1AC89A3624C0EF2A34C1ED5E3E /* PGPCalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920A16F5DC198A5A6E092D527BFEE275 /* PGPCalendarViewCell.m */; };
+		5356E43906D67028A944F5B1D922043B /* NSDate+PGPCalendarViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 487FF073E5CFBB261951345263CC30AC /* NSDate+PGPCalendarViewAdditions.m */; };
+		5CE9F796B3996EF31D278C52542E1E3E /* PGPCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2884F7DF59BC36B5034453C8AD08E3DE /* PGPCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73C5F4C80894B8CD971943A002695C66 /* PGPCalendarMarkerContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B42B8FF54A9476EFBA25F1DB4BDCEF /* PGPCalendarMarkerContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FFEE50375D02F3375ED58BBF4376AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		835C59BAAC056A26F0E9D23A46C20198 /* PGPCalendarController.h in Headers */ = {isa = PBXBuildFile; fileRef = E029A0AA59EB4357E1AEAF211FDC76D3 /* PGPCalendarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E7886DAAA5E549574BBC4C0F18FF4CF /* HWExpandArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9B0F6C1B6BF5AE2DC02973160EAB90 /* HWExpandArrow.png */; };
+		9EBE6D41180183C4FF6E7DD91CE30394 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		9FB97E8B5AC84D828D1ABA281766F6C0 /* NSDate+PGPCalendarViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F8606A4D5BEC0DC92FC744D70891F8C7 /* NSDate+PGPCalendarViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A882BB253C5D847C5E151712FD2E8444 /* PGPCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F99FADCD0F1932B8AE88CAFC7EDEBE6 /* PGPCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1B2E69F3EBDAEC5843867C6D9DD152F /* PGPCalendarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42DB2AE6DC31E5C9FC5780228FB5FA8 /* PGPCalendarViewCell.xib */; };
+		B64A782911B8553177721D0A235013DA /* HWExpandArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87425FF94CA010C1EA54BFC97E75DFAE /* HWExpandArrow@3x.png */; };
+		C5D2BF5365D2722A88ABA6BDB54A7180 /* Pods-PGPCalendarView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 306B507853BB5E9930473BDB1816BC93 /* Pods-PGPCalendarView_Example-dummy.m */; };
+		CB776E105940C92D02C85E7A41E3F4FF /* HWCollapseArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 894A5FA31C1BBC8A45960316A203FCAD /* HWCollapseArrow@3x.png */; };
+		CF65041746906A4A839BBF6258702029 /* PGPCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 686632B40674718FAD463A5ACFCE1FF1 /* PGPCalendarView.m */; };
+		D9F10EBF609F6CC4C73608BBEC588719 /* PGPCalendarViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AD736BE2B440B6236ED0C1C54B28F2B /* PGPCalendarViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDCF1AF57E4EA6C4BE1363A0DC268D09 /* PGPCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AC4D38FFD090C761A38436BE8B5310 /* PGPCalendarHeaderView.m */; };
+		EE5E950AE76C37AFEE97C9051B4AB4DB /* HWExpandArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76EAA00D02A051FC2F7C3538BC9C8CF4 /* HWExpandArrow@2x.png */; };
+		F147E9B4A3C9A1957EC293F39EF3EE1B /* PGPCalendarMarkerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8744DF68EBFEC2758980081060C06E18 /* PGPCalendarMarkerContainerView.m */; };
+		F241353235E0BADAC4D6443F51A3F818 /* PGPCalendarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAF461BDCF453F1A1BB149195770BE9 /* PGPCalendarView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09438865C5F1C3A786965C44BEC80C7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B093815619A72C701EB53AC4E89B21;
+			remoteInfo = PGPCalendarView;
+		};
+		1689042CFF4E69485309241CFBD13DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 439DADF54E993CAA0080B2293035454A;
+			remoteInfo = "PGPCalendarView-PGPCalendarView";
+		};
+		FCB56F0EC16DB6295DF83A69DD9AC660 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B093815619A72C701EB53AC4E89B21;
+			remoteInfo = PGPCalendarView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05AC4D38FFD090C761A38436BE8B5310 /* PGPCalendarHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarHeaderView.m; sourceTree = "<group>"; };
+		0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PGPCalendarView.xcconfig; sourceTree = "<group>"; };
+		0EF482740A76D62867DB08C2B0D5D44B /* Pods-PGPCalendarView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		15B42B8FF54A9476EFBA25F1DB4BDCEF /* PGPCalendarMarkerContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarMarkerContainerView.h; sourceTree = "<group>"; };
+		27329E9F19CC473B3D88F4F2FF6A50CF /* Pods-PGPCalendarView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGPCalendarView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2884F7DF59BC36B5034453C8AD08E3DE /* PGPCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarHeaderView.h; sourceTree = "<group>"; };
+		306B507853BB5E9930473BDB1816BC93 /* Pods-PGPCalendarView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PGPCalendarView_Example-dummy.m"; sourceTree = "<group>"; };
+		332F83134E8A5BB2896A7061C37B805C /* HWCollapseArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = HWCollapseArrow.png; sourceTree = "<group>"; };
+		3E1D6B45625848D24C8B352C91330226 /* HWCollapseArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "HWCollapseArrow@2x.png"; sourceTree = "<group>"; };
+		3E1FA358A91E26C38F8B3C1AE4852DEA /* Pods-PGPCalendarView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGPCalendarView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		43E1E2F1618CE7751505EE5D924F98A4 /* Pods-PGPCalendarView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		487FF073E5CFBB261951345263CC30AC /* NSDate+PGPCalendarViewAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PGPCalendarViewAdditions.m"; sourceTree = "<group>"; };
+		4D99D449CB3B2DDE43C7C5212B6264AE /* Pods-PGPCalendarView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Example-resources.sh"; sourceTree = "<group>"; };
+		5AD736BE2B440B6236ED0C1C54B28F2B /* PGPCalendarViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarViewCell.h; sourceTree = "<group>"; };
+		63B1EFCA01271B2E7D2E42B8D7C30C0D /* PGPCalendarView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PGPCalendarView-prefix.pch"; sourceTree = "<group>"; };
+		64C5627BAD143A371B0CD44E3208E3EF /* PGPCalendarView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGPCalendarView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		686632B40674718FAD463A5ACFCE1FF1 /* PGPCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarView.m; sourceTree = "<group>"; };
+		6896386728C15AF6D8CD6483494AAD60 /* PGPCalendarHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PGPCalendarHeaderView.xib; sourceTree = "<group>"; };
+		6F99FADCD0F1932B8AE88CAFC7EDEBE6 /* PGPCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarView.h; sourceTree = "<group>"; };
+		737D2F22A1AE4BA0BA02F9EDFEFCE5BA /* Pods-PGPCalendarView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Tests-resources.sh"; sourceTree = "<group>"; };
+		76EAA00D02A051FC2F7C3538BC9C8CF4 /* HWExpandArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "HWExpandArrow@2x.png"; sourceTree = "<group>"; };
+		87425FF94CA010C1EA54BFC97E75DFAE /* HWExpandArrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "HWExpandArrow@3x.png"; sourceTree = "<group>"; };
+		8744DF68EBFEC2758980081060C06E18 /* PGPCalendarMarkerContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarMarkerContainerView.m; sourceTree = "<group>"; };
+		894A5FA31C1BBC8A45960316A203FCAD /* HWCollapseArrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "HWCollapseArrow@3x.png"; sourceTree = "<group>"; };
+		8D191743D889F38814F410E412FEDAEB /* Pods-PGPCalendarView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PGPCalendarView_Tests-dummy.m"; sourceTree = "<group>"; };
+		8D9B0F6C1B6BF5AE2DC02973160EAB90 /* HWExpandArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = HWExpandArrow.png; sourceTree = "<group>"; };
+		920A16F5DC198A5A6E092D527BFEE275 /* PGPCalendarViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarViewCell.m; sourceTree = "<group>"; };
+		9AFE753ABA17B1CD2BFA3145C6200D2E /* Pods-PGPCalendarView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A1F2FB17EB4071D5AE8570091FB265AE /* libPods-PGPCalendarView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGPCalendarView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42DB2AE6DC31E5C9FC5780228FB5FA8 /* PGPCalendarViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PGPCalendarViewCell.xib; sourceTree = "<group>"; };
+		A50A1CF9CCF77139B7C8D33E4189528A /* Pods-PGPCalendarView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		A7789068EC9A4E9E02EDDCB1C12698BA /* PGPCalendarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarController.m; sourceTree = "<group>"; };
+		B43F2777B338729C1DD2026AE968209D /* libPGPCalendarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPGPCalendarView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B918E63B4C73E45F2CC6CDEBB7D90A26 /* Pods-PGPCalendarView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PGPCalendarView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9C1A52EEF7A583FC79C344ACE5FB6E2 /* libPods-PGPCalendarView_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGPCalendarView_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BFAF461BDCF453F1A1BB149195770BE9 /* PGPCalendarView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PGPCalendarView-dummy.m"; sourceTree = "<group>"; };
+		D08DA98631462CCB0E5708E9065B77EB /* Pods-PGPCalendarView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E029A0AA59EB4357E1AEAF211FDC76D3 /* PGPCalendarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarController.h; sourceTree = "<group>"; };
+		E5397520B52411DCC611281547E7C3FA /* Pods-PGPCalendarView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PGPCalendarView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F8606A4D5BEC0DC92FC744D70891F8C7 /* NSDate+PGPCalendarViewAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+PGPCalendarViewAdditions.h"; sourceTree = "<group>"; };
+		FB3EDC09A961CA9936B60309E50C8464 /* Pods-PGPCalendarView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		105FE2551A18E7BE7372E9CAD905E907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBE6D41180183C4FF6E7DD91CE30394 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61BD3BEF3C18A381C3BE62A700CA5B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D127D378AEA20B8E6386021A3BA510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				310FC86FDE0793C0B80E0ACBAAB0A798 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE64495335FD673A2FD5806BC70DE46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FFEE50375D02F3375ED58BBF4376AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EB70057783BA8E50DA00086360DFD50 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA37FF74B48DFFEFC44CECB063029840 /* Pods-PGPCalendarView_Example */,
+				ABD88F0E0F90147C27036A5074CC1D96 /* Pods-PGPCalendarView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		24CC88C3F96CE5EBEA873E605EEBC56D /* PGPCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				5D57615AC5DECAB42ABFFD00B09E90EC /* Pod */,
+				2942DE06FCCF433351E07015CD7918C1 /* Resources */,
+				6855728A2A5536A8DF01508E6C753E8C /* Support Files */,
+			);
+			name = PGPCalendarView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2942DE06FCCF433351E07015CD7918C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E7BF2C58D09A32722FED06AACDC63AAD /* Pod */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		32F1D19E956F7A78C9A3E9B8E8473454 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				6896386728C15AF6D8CD6483494AAD60 /* PGPCalendarHeaderView.xib */,
+				A42DB2AE6DC31E5C9FC5780228FB5FA8 /* PGPCalendarViewCell.xib */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		5D57615AC5DECAB42ABFFD00B09E90EC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D71DE39678F0824AB72EFC898601C5ED /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		66931151D0344D4DD794ED4D5F382951 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24CC88C3F96CE5EBEA873E605EEBC56D /* PGPCalendarView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		6855728A2A5536A8DF01508E6C753E8C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */,
+				BFAF461BDCF453F1A1BB149195770BE9 /* PGPCalendarView-dummy.m */,
+				63B1EFCA01271B2E7D2E42B8D7C30C0D /* PGPCalendarView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PGPCalendarView";
+			sourceTree = "<group>";
+		};
+		6E7B029B727A2361D3C480AF93E871E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B43F2777B338729C1DD2026AE968209D /* libPGPCalendarView.a */,
+				A1F2FB17EB4071D5AE8570091FB265AE /* libPods-PGPCalendarView_Example.a */,
+				B9C1A52EEF7A583FC79C344ACE5FB6E2 /* libPods-PGPCalendarView_Tests.a */,
+				64C5627BAD143A371B0CD44E3208E3EF /* PGPCalendarView.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				66931151D0344D4DD794ED4D5F382951 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6E7B029B727A2361D3C480AF93E871E4 /* Products */,
+				0EB70057783BA8E50DA00086360DFD50 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		ABD88F0E0F90147C27036A5074CC1D96 /* Pods-PGPCalendarView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				27329E9F19CC473B3D88F4F2FF6A50CF /* Pods-PGPCalendarView_Tests-acknowledgements.markdown */,
+				B918E63B4C73E45F2CC6CDEBB7D90A26 /* Pods-PGPCalendarView_Tests-acknowledgements.plist */,
+				8D191743D889F38814F410E412FEDAEB /* Pods-PGPCalendarView_Tests-dummy.m */,
+				43E1E2F1618CE7751505EE5D924F98A4 /* Pods-PGPCalendarView_Tests-frameworks.sh */,
+				737D2F22A1AE4BA0BA02F9EDFEFCE5BA /* Pods-PGPCalendarView_Tests-resources.sh */,
+				FB3EDC09A961CA9936B60309E50C8464 /* Pods-PGPCalendarView_Tests.debug.xcconfig */,
+				D08DA98631462CCB0E5708E9065B77EB /* Pods-PGPCalendarView_Tests.release.xcconfig */,
+			);
+			name = "Pods-PGPCalendarView_Tests";
+			path = "Target Support Files/Pods-PGPCalendarView_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D10CE3903A492FDBBC4ABAE5FC563C15 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				332F83134E8A5BB2896A7061C37B805C /* HWCollapseArrow.png */,
+				3E1D6B45625848D24C8B352C91330226 /* HWCollapseArrow@2x.png */,
+				894A5FA31C1BBC8A45960316A203FCAD /* HWCollapseArrow@3x.png */,
+				8D9B0F6C1B6BF5AE2DC02973160EAB90 /* HWExpandArrow.png */,
+				76EAA00D02A051FC2F7C3538BC9C8CF4 /* HWExpandArrow@2x.png */,
+				87425FF94CA010C1EA54BFC97E75DFAE /* HWExpandArrow@3x.png */,
+				32F1D19E956F7A78C9A3E9B8E8473454 /* ios */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D71DE39678F0824AB72EFC898601C5ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F8606A4D5BEC0DC92FC744D70891F8C7 /* NSDate+PGPCalendarViewAdditions.h */,
+				487FF073E5CFBB261951345263CC30AC /* NSDate+PGPCalendarViewAdditions.m */,
+				E029A0AA59EB4357E1AEAF211FDC76D3 /* PGPCalendarController.h */,
+				A7789068EC9A4E9E02EDDCB1C12698BA /* PGPCalendarController.m */,
+				2884F7DF59BC36B5034453C8AD08E3DE /* PGPCalendarHeaderView.h */,
+				F977AA1F68FB19E073A28F1288EFC77B /* ios */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA37FF74B48DFFEFC44CECB063029840 /* Pods-PGPCalendarView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3E1FA358A91E26C38F8B3C1AE4852DEA /* Pods-PGPCalendarView_Example-acknowledgements.markdown */,
+				E5397520B52411DCC611281547E7C3FA /* Pods-PGPCalendarView_Example-acknowledgements.plist */,
+				306B507853BB5E9930473BDB1816BC93 /* Pods-PGPCalendarView_Example-dummy.m */,
+				A50A1CF9CCF77139B7C8D33E4189528A /* Pods-PGPCalendarView_Example-frameworks.sh */,
+				4D99D449CB3B2DDE43C7C5212B6264AE /* Pods-PGPCalendarView_Example-resources.sh */,
+				0EF482740A76D62867DB08C2B0D5D44B /* Pods-PGPCalendarView_Example.debug.xcconfig */,
+				9AFE753ABA17B1CD2BFA3145C6200D2E /* Pods-PGPCalendarView_Example.release.xcconfig */,
+			);
+			name = "Pods-PGPCalendarView_Example";
+			path = "Target Support Files/Pods-PGPCalendarView_Example";
+			sourceTree = "<group>";
+		};
+		E7BF2C58D09A32722FED06AACDC63AAD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D10CE3903A492FDBBC4ABAE5FC563C15 /* Assets */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		F977AA1F68FB19E073A28F1288EFC77B /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				05AC4D38FFD090C761A38436BE8B5310 /* PGPCalendarHeaderView.m */,
+				15B42B8FF54A9476EFBA25F1DB4BDCEF /* PGPCalendarMarkerContainerView.h */,
+				8744DF68EBFEC2758980081060C06E18 /* PGPCalendarMarkerContainerView.m */,
+				6F99FADCD0F1932B8AE88CAFC7EDEBE6 /* PGPCalendarView.h */,
+				686632B40674718FAD463A5ACFCE1FF1 /* PGPCalendarView.m */,
+				5AD736BE2B440B6236ED0C1C54B28F2B /* PGPCalendarViewCell.h */,
+				920A16F5DC198A5A6E092D527BFEE275 /* PGPCalendarViewCell.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2130E77986CFDA461ADD3B1C2D9945D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB97E8B5AC84D828D1ABA281766F6C0 /* NSDate+PGPCalendarViewAdditions.h in Headers */,
+				835C59BAAC056A26F0E9D23A46C20198 /* PGPCalendarController.h in Headers */,
+				5CE9F796B3996EF31D278C52542E1E3E /* PGPCalendarHeaderView.h in Headers */,
+				73C5F4C80894B8CD971943A002695C66 /* PGPCalendarMarkerContainerView.h in Headers */,
+				A882BB253C5D847C5E151712FD2E8444 /* PGPCalendarView.h in Headers */,
+				D9F10EBF609F6CC4C73608BBEC588719 /* PGPCalendarViewCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09932DA3BE846CB6DF94E5598414BCDB /* Pods-PGPCalendarView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA2BF21188D667C1266D37FE336BF60A /* Build configuration list for PBXNativeTarget "Pods-PGPCalendarView_Tests" */;
+			buildPhases = (
+				82CFBC7E6928ABB1E2094F40860AE0E9 /* Sources */,
+				EE64495335FD673A2FD5806BC70DE46C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71806042206A7CFAD47A147445460DF5 /* PBXTargetDependency */,
+			);
+			name = "Pods-PGPCalendarView_Tests";
+			productName = "Pods-PGPCalendarView_Tests";
+			productReference = B9C1A52EEF7A583FC79C344ACE5FB6E2 /* libPods-PGPCalendarView_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		439DADF54E993CAA0080B2293035454A /* PGPCalendarView-PGPCalendarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67EF1C9ED250B63859E4F93FD7560D87 /* Build configuration list for PBXNativeTarget "PGPCalendarView-PGPCalendarView" */;
+			buildPhases = (
+				CA68B6123C82B87DBF1D52189FC81904 /* Sources */,
+				61BD3BEF3C18A381C3BE62A700CA5B9D /* Frameworks */,
+				C200F1086C8957A67558E1CDFEB72D3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PGPCalendarView-PGPCalendarView";
+			productName = "PGPCalendarView-PGPCalendarView";
+			productReference = 64C5627BAD143A371B0CD44E3208E3EF /* PGPCalendarView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		50B093815619A72C701EB53AC4E89B21 /* PGPCalendarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A809420B0393BC8B40F447E9DE302C10 /* Build configuration list for PBXNativeTarget "PGPCalendarView" */;
+			buildPhases = (
+				200D596C80E3BCF83DA3A66C29F066E7 /* Sources */,
+				D5D127D378AEA20B8E6386021A3BA510 /* Frameworks */,
+				2130E77986CFDA461ADD3B1C2D9945D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C79A1F7C747487F5A07B31B63B9CF47 /* PBXTargetDependency */,
+			);
+			name = PGPCalendarView;
+			productName = PGPCalendarView;
+			productReference = B43F2777B338729C1DD2026AE968209D /* libPGPCalendarView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5DB66C72805992C75E445AF349CD05E1 /* Pods-PGPCalendarView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635481DDE77D014C55CDACFB96EE5DF9 /* Build configuration list for PBXNativeTarget "Pods-PGPCalendarView_Example" */;
+			buildPhases = (
+				5CBB59CC5B275D802802B55A485C81A8 /* Sources */,
+				105FE2551A18E7BE7372E9CAD905E907 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11A182366F3D9CBF4A559763D9EB8A4D /* PBXTargetDependency */,
+			);
+			name = "Pods-PGPCalendarView_Example";
+			productName = "Pods-PGPCalendarView_Example";
+			productReference = A1F2FB17EB4071D5AE8570091FB265AE /* libPods-PGPCalendarView_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6E7B029B727A2361D3C480AF93E871E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50B093815619A72C701EB53AC4E89B21 /* PGPCalendarView */,
+				439DADF54E993CAA0080B2293035454A /* PGPCalendarView-PGPCalendarView */,
+				5DB66C72805992C75E445AF349CD05E1 /* Pods-PGPCalendarView_Example */,
+				09932DA3BE846CB6DF94E5598414BCDB /* Pods-PGPCalendarView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C200F1086C8957A67558E1CDFEB72D3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41EF14D0F0FEA198497300DBCFE11A74 /* HWCollapseArrow.png in Resources */,
+				2903AD986EA16D5188778AE24B5115D9 /* HWCollapseArrow@2x.png in Resources */,
+				CB776E105940C92D02C85E7A41E3F4FF /* HWCollapseArrow@3x.png in Resources */,
+				9E7886DAAA5E549574BBC4C0F18FF4CF /* HWExpandArrow.png in Resources */,
+				EE5E950AE76C37AFEE97C9051B4AB4DB /* HWExpandArrow@2x.png in Resources */,
+				B64A782911B8553177721D0A235013DA /* HWExpandArrow@3x.png in Resources */,
+				1E39B51C51F43399531461092689F8DE /* PGPCalendarHeaderView.xib in Resources */,
+				B1B2E69F3EBDAEC5843867C6D9DD152F /* PGPCalendarViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		200D596C80E3BCF83DA3A66C29F066E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5356E43906D67028A944F5B1D922043B /* NSDate+PGPCalendarViewAdditions.m in Sources */,
+				4890EAB80EEF77C7387B52E4D755E039 /* PGPCalendarController.m in Sources */,
+				DDCF1AF57E4EA6C4BE1363A0DC268D09 /* PGPCalendarHeaderView.m in Sources */,
+				F147E9B4A3C9A1957EC293F39EF3EE1B /* PGPCalendarMarkerContainerView.m in Sources */,
+				F241353235E0BADAC4D6443F51A3F818 /* PGPCalendarView-dummy.m in Sources */,
+				CF65041746906A4A839BBF6258702029 /* PGPCalendarView.m in Sources */,
+				4D250E1AC89A3624C0EF2A34C1ED5E3E /* PGPCalendarViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CBB59CC5B275D802802B55A485C81A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D2BF5365D2722A88ABA6BDB54A7180 /* Pods-PGPCalendarView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CFBC7E6928ABB1E2094F40860AE0E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1229C30B01B20344E85F7A5B206DD4C9 /* Pods-PGPCalendarView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA68B6123C82B87DBF1D52189FC81904 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11A182366F3D9CBF4A559763D9EB8A4D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PGPCalendarView;
+			target = 50B093815619A72C701EB53AC4E89B21 /* PGPCalendarView */;
+			targetProxy = 09438865C5F1C3A786965C44BEC80C7F /* PBXContainerItemProxy */;
+		};
+		6C79A1F7C747487F5A07B31B63B9CF47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PGPCalendarView-PGPCalendarView";
+			target = 439DADF54E993CAA0080B2293035454A /* PGPCalendarView-PGPCalendarView */;
+			targetProxy = 1689042CFF4E69485309241CFBD13DA7 /* PBXContainerItemProxy */;
+		};
+		71806042206A7CFAD47A147445460DF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PGPCalendarView;
+			target = 50B093815619A72C701EB53AC4E89B21 /* PGPCalendarView */;
+			targetProxy = FCB56F0EC16DB6295DF83A69DD9AC660 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2016298284B05B615F8649A2084329A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB3EDC09A961CA9936B60309E50C8464 /* Pods-PGPCalendarView_Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3F53CFCC0930C561A9AF175BAC2ED16A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08DA98631462CCB0E5708E9065B77EB /* Pods-PGPCalendarView_Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6EDFE5FD6D0B414D2B55E306B3E980A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EF482740A76D62867DB08C2B0D5D44B /* Pods-PGPCalendarView_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		87F38146F96DD67E1B5D27CD204546AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AFE753ABA17B1CD2BFA3145C6200D2E /* Pods-PGPCalendarView_Example.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9D117389068FFA110BAF8A99F79E54BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PGPCalendarView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BADFB05CB065838CFD0094B8218D998E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PGPCalendarView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		CB9940F47F34454B8657A86F0D5B02C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PGPCalendarView/PGPCalendarView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F6FBF83F8C6979E7E58363ABB43152F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABEF26DE159ECF9DB570A0DD40A141B /* PGPCalendarView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PGPCalendarView/PGPCalendarView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635481DDE77D014C55CDACFB96EE5DF9 /* Build configuration list for PBXNativeTarget "Pods-PGPCalendarView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EDFE5FD6D0B414D2B55E306B3E980A2 /* Debug */,
+				87F38146F96DD67E1B5D27CD204546AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67EF1C9ED250B63859E4F93FD7560D87 /* Build configuration list for PBXNativeTarget "PGPCalendarView-PGPCalendarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D117389068FFA110BAF8A99F79E54BA /* Debug */,
+				BADFB05CB065838CFD0094B8218D998E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A809420B0393BC8B40F447E9DE302C10 /* Build configuration list for PBXNativeTarget "PGPCalendarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9940F47F34454B8657A86F0D5B02C3 /* Debug */,
+				F6FBF83F8C6979E7E58363ABB43152F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA2BF21188D667C1266D37FE336BF60A /* Build configuration list for PBXNativeTarget "Pods-PGPCalendarView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2016298284B05B615F8649A2084329A9 /* Debug */,
+				3F53CFCC0930C561A9AF175BAC2ED16A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
