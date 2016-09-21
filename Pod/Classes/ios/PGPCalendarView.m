@@ -27,6 +27,8 @@
 
 @property (nonatomic, strong) NSDateFormatter *monthFormatter;
 
+@property (nonatomic, strong) NSIndexPath *selectedIndexPathAfterScrollingAnimationDelay;
+
 @property (nonatomic, strong) PGPCalendarController *calendarController;
 
 @property (nonatomic, strong) PGPCalendarHeaderView *headerView;
@@ -150,12 +152,11 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     if (_selectedDate != startOfSelectedDate) {
         NSIndexPath *oldIndexPath  = [self.calendarController indexPathForDate:_selectedDate];
         if (oldIndexPath) {
-            UICollectionViewCell *oldCell = [self.collectionView cellForItemAtIndexPath:oldIndexPath];
-            oldCell.selected = NO;
+          [self.collectionView deselectItemAtIndexPath:oldIndexPath animated:animated];
         }
         
         _selectedDate = startOfSelectedDate;
-        
+      
         NSIndexPath *newIndexPath = [self.calendarController indexPathForDate:_selectedDate];
         if (newIndexPath && !self.needsFirstLayoutPass) {
             [self selectItemAtIndexPath:newIndexPath animated:animated];
@@ -298,6 +299,7 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.pagingEnabled = YES;
+    _collectionView.scrollsToTop = NO;
     _collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.showsVerticalScrollIndicator = NO;
     _collectionView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -391,25 +393,33 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
 
 /* */
 - (void)selectItemAtIndexPath:(NSIndexPath *)selectedIndexPath animated:(BOOL)animated {
-    if ([[self.collectionView indexPathsForVisibleItems] containsObject:selectedIndexPath]) {
-            [self.collectionView selectItemAtIndexPath:selectedIndexPath animated:animated scrollPosition:UICollectionViewScrollPositionNone];
-        return;
-    }
-    
-    // Determine the page for the given index path.
-    NSInteger page = floor(selectedIndexPath.item / [self numberOfDatesPerPageForDisplayMode:self.displayMode]);
-    
-    // Get the first item (top left corner) on this page. We use this item as the target scroll index path
-    // so that we can always animate with a scroll position of 'top'.
-    NSIndexPath *targetScrollIndexPath = [self.collectionView indexPathForItemAtPoint:CGPointMake(0.f, page * self.pageSize.height)];
-    
-    UICollectionViewScrollPosition selectedIndexPathScrollPosition = UICollectionViewScrollPositionCenteredHorizontally;
-    if (targetScrollIndexPath) {
-        [self.collectionView scrollToItemAtIndexPath:targetScrollIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:animated];
-        selectedIndexPathScrollPosition = UICollectionViewScrollPositionNone;
-    }
+  if ([[self.collectionView indexPathsForVisibleItems] containsObject:selectedIndexPath]) {
+          [self.collectionView selectItemAtIndexPath:selectedIndexPath animated:animated scrollPosition:UICollectionViewScrollPositionNone];
+      return;
+  }
+  
+  // Determine the page for the given index path.
+  NSInteger page = floor(selectedIndexPath.item / [self numberOfDatesPerPageForDisplayMode:self.displayMode]);
+  
+  // Get the first item (top left corner) on this page. We use this item as the target scroll index path
+  // so that we can always animate with a scroll position of 'top'.
+  NSIndexPath *targetScrollIndexPath = [self.collectionView indexPathForItemAtPoint:CGPointMake(0.f, page * self.pageSize.height)];
+  
+  UICollectionViewScrollPosition selectedIndexPathScrollPosition = UICollectionViewScrollPositionCenteredHorizontally;
+  if (targetScrollIndexPath) {
+      [self.collectionView scrollToItemAtIndexPath:targetScrollIndexPath atScrollPosition:UICollectionViewScrollPositionTop animated:animated];
+      selectedIndexPathScrollPosition = UICollectionViewScrollPositionNone;
+  }
 
+  NSLog(@"selecting item at index path: %@ which is date %@", selectedIndexPath, [self.calendarController dateAtIndexPath:selectedIndexPath]);
+  // If selection is animated and the scroll position is none (we just want to highlight a cell that's already in place), we have
+  // to delay the selection to ensure that the cell we need to select actually exists. Otherwise, we can just select it now.
+  // Delayed selection will happen in an `scrollViewDidEndScrollingAnimation:`.
+  if (animated && selectedIndexPathScrollPosition == UICollectionViewScrollPositionNone) {
+    self.selectedIndexPathAfterScrollingAnimationDelay = selectedIndexPath;
+  } else {
     [self.collectionView selectItemAtIndexPath:selectedIndexPath animated:animated scrollPosition:selectedIndexPathScrollPosition];
+  }
 }
 
 /* */
@@ -577,7 +587,12 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
 
 /* */
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    [self updateMonthLabelForStartDate:[self firstVisibleDate] endDate:[self lastVisibleDate]];
+  [self updateMonthLabelForStartDate:[self firstVisibleDate] endDate:[self lastVisibleDate]];
+  
+  if (self.selectedIndexPathAfterScrollingAnimationDelay) {
+    [self.collectionView selectItemAtIndexPath:self.selectedIndexPathAfterScrollingAnimationDelay animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    self.selectedIndexPathAfterScrollingAnimationDelay = nil;
+  }
 }
 
 @end
