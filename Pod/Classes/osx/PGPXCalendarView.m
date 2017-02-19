@@ -127,11 +127,11 @@
     [super layout];
     
     if (self.needsFirstLayoutPass) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self selectItemAtIndexPath:[self.calendarController indexPathForDate:self.selectedDate]];
-            [self updateMonthLabelForStartDate:[self firstVisibleDate] endDate:[self lastVisibleDate]];
-        });
-        self.needsFirstLayoutPass = NO;
+      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self selectItemAtIndexPath:[self.calendarController indexPathForDate:self.selectedDate]];
+        [self updateMonthLabelForStartDate:[self firstVisibleDate] endDate:[self lastVisibleDate]];
+      });
+      self.needsFirstLayoutPass = NO;
     }
 }
 
