@@ -1,11 +1,18 @@
 source 'https://github.com/CocoaPods/Specs.git'
 #use_frameworks!
 
-target 'PGPCalendarView_Example', :exclusive => true do
+workspace "PGPCalendarView"
+
+target 'PGPCalendarView_Example' do
   pod "PGPCalendarView", :path => "../"
 end
 
-target 'PGPCalendarView_Tests', :exclusive => true do
+target 'PGPXCalendarView' do
+  project 'PGPXCalendarView/PGPXCalendarView'
+  pod "PGPCalendarView", :path => "../"
+end
+
+target 'PGPCalendarView_Tests' do
   pod "PGPCalendarView", :path => "../"
 
   

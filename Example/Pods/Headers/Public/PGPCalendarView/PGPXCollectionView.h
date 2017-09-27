@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/osx/PGPXCollectionView.h

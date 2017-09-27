@@ -5,6 +5,9 @@
       location = "group:PGPCalendarView.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:PGPXCalendarView/PGPXCalendarView.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

@@ -431,15 +431,19 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
 
         if (startDateComps.year == endDateComps.year
             && startDateComps.month == endDateComps.month) {
-            [self.monthFormatter setDateFormat:@"MMMM yyyy"];
+          NSString *monthFormatTemplate = [NSDateFormatter dateFormatFromTemplate:@"MMMM yyyy" options:0 locale:[NSLocale localeWithLocaleIdentifier:@"en"]];
+          [self.monthFormatter setDateFormat:monthFormatTemplate];
             self.monthLabel.text = [self.monthFormatter stringFromDate:startDate];
         } else {
-            [self.monthFormatter setDateFormat:@"MMM yyyy"];
-            self.monthLabel.text = [NSString stringWithFormat:@"%@ - %@", [self.monthFormatter stringFromDate:startDate], [self.monthFormatter stringFromDate:endDate]];
+          NSString *monthFormatTemplate = [NSDateFormatter dateFormatFromTemplate:@"MMM yyyy" options:0 locale:[NSLocale localeWithLocaleIdentifier:@"en"]];
+          [self.monthFormatter setDateFormat:monthFormatTemplate];
+          self.monthLabel.text = [NSString stringWithFormat:@"%@ - %@", [self.monthFormatter stringFromDate:startDate], [self.monthFormatter stringFromDate:endDate]];
         }
     } else {
-        [self.monthFormatter setDateFormat:@"MMMM yyyy"];
-        self.monthLabel.text = [self.monthFormatter stringFromDate:startDate];
+      NSString *monthFormatTemplate = [NSDateFormatter dateFormatFromTemplate:@"MMMM yyyy" options:0 locale:[NSLocale localeWithLocaleIdentifier:@"en"]];
+      [self.monthFormatter setDateFormat:monthFormatTemplate];
+
+      self.monthLabel.text = [self.monthFormatter stringFromDate:startDate];
     }
 }
 
