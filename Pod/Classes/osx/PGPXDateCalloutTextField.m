@@ -12,18 +12,39 @@
 
 /* */
 - (instancetype)initWithCoder:(NSCoder *)coder {
-    self = [super initWithCoder:coder];
-    if (self) {
-        self.alignment = NSTextAlignmentCenter;
-        self.drawsBackground = NO;
-        
-        //_borderColor = [NSColor blackColor];
-        //_borderWidth = 1.f;
-        _cornerRadius = 4.f;
-        _fillColor = [NSColor blackColor];
-    }
+  self = [super initWithCoder:coder];
+  if (self) {
+    self.alignment = NSTextAlignmentCenter;
+    self.bezeled = NO;
+    self.drawsBackground = NO;
+    self.editable = NO;
     
-    return self;
+    _cornerRadius = 4.f;
+    _fillColor = [NSColor blackColor];
+  }
+  
+  return self;
+}
+
+/* */
+- (instancetype)init {
+  return [self initWithFrame:NSZeroRect];
+}
+
+/* */
+- (instancetype)initWithFrame:(NSRect)frameRect {
+  self = [super initWithFrame:frameRect];
+  if (self) {
+    self.alignment = NSTextAlignmentCenter;
+    self.bezeled = NO;
+    self.drawsBackground = NO;
+    self.editable = NO;
+
+    _cornerRadius = 4.f;
+    _fillColor = [NSColor blackColor];
+  }
+  
+  return self;
 }
 
 /* */

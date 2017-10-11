@@ -31,7 +31,7 @@
 @property (nonatomic, strong) NSColor *calendarTextColor;
 
 /** */
-- (void)reloadData;
+- (void)reloadItems;
 
 @end
 

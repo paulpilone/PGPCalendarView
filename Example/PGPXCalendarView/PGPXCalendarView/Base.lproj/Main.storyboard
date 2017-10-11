@@ -701,39 +701,38 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="328"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="I1v-tA-mYV" customClass="PGPXCalendarView">
-                                <rect key="frame" x="100" y="27" width="280" height="217"/>
+                                <rect key="frame" x="100" y="35" width="280" height="259"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="217" id="3Dz-7c-nRO"/>
+                                    <constraint firstAttribute="height" constant="259" id="3Dz-7c-nRO"/>
                                     <constraint firstAttribute="width" constant="280" id="3E2-iA-zvv"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="XfG-lQ-9wD" id="CRP-jA-Ono"/>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="HDa-Ko-Eh1"/>
+                                </connections>
                             </customView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SqM-Ob-LCH">
-                                <rect key="frame" x="14" y="222" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mq1-aG-PmG">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="I1v-tA-mYV" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="AHg-kf-gNI"/>
                             <constraint firstItem="I1v-tA-mYV" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="mM9-XD-RZc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarView" destination="I1v-tA-mYV" id="2fn-I9-gvt"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="684"/>
         </scene>
     </scenes>
 </document>

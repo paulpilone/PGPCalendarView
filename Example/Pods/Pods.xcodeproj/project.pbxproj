@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		06493215D45DC33BC742A5168B348208 /* HWCollapseArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62946B94D3199832FAAD525E3D3A2509 /* HWCollapseArrow@3x.png */; };
-		0F224070BF977774F8DE9349468F9572 /* PGPXCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3638F56C99A95C82120C9C2B5B315270 /* PGPXCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13D6D8918F38D7CE9CE24957C747173A /* PGPXCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = EDD2318B863E4C169019E174EAD5012B /* PGPXCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		169A200B8BE81649C2C5DD26D175E504 /* HWCollapseArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62946B94D3199832FAAD525E3D3A2509 /* HWCollapseArrow@3x.png */; };
 		1B4CF9A77EB827C2B4CC4976597B3AA7 /* HWExpandArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 834CEC8E032746EE1808623AA6ECA0B7 /* HWExpandArrow@2x.png */; };
 		1EED277F9B9A96389805A494E028879D /* NSDate+PGPCalendarViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E04359BF8FE09761F882EE1C231AAE /* NSDate+PGPCalendarViewAdditions.m */; };
-		20F66000A1E6C0BB0BE4C4767FD615D0 /* PGPXCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB137F9DDB80E529FBF6DB389DF972C0 /* PGPXCalendarView.xib */; };
 		23D5ED719E82B17569FF91C248ACE011 /* HWCollapseArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 278BF42782FF95D90AB6DD539B37EB49 /* HWCollapseArrow.png */; };
 		252ECDD065A1C6DB3B948902987F8DE9 /* PGPXCalendarViewItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9F97E2BA685427F454FEF5108E4E7E /* PGPXCalendarViewItemView.m */; };
 		2813E83AD67B54F6233B7F2C0BBC82DA /* NSDate+PGPCalendarViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F446E386704C6BB6B7A0D436E2D56B68 /* NSDate+PGPCalendarViewAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35108335EEF520F4FB9D7AF079AE0CB0 /* PGPCalendarMarkerContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 634BA87049292CFAFA37E65BDD417E88 /* PGPCalendarMarkerContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3612597C149C5F0587A86E23D0C809FE /* PGPXCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1B0556BB24D9C60321F804CFAF642C /* PGPXCollectionView.m */; };
 		36350FA6987A2313573E43C4B959396C /* PGPCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2F17BC37D48A112CC2AC3C777D4CAF /* PGPCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B441EF2A61D6702AFCC76015A82B021 /* PGPXScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64411FAD0DD1829A4EC69854077CFAB2 /* PGPXScrollView.m */; };
 		3D11F8B80584EEE1C96BE442B3832DFE /* HWExpandArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F093F29ADB2F1661B45B06F50E2826E8 /* HWExpandArrow@3x.png */; };
@@ -62,6 +59,10 @@
 		D733A1AFD817D08CBC7458117AF0FA77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */; };
 		D7CC37698F383C04C4C216A9352D85DB /* PGPCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6570B924588334DC3B9AFB858E2DAE45 /* PGPCalendarView.m */; };
 		D7DB6DA41CBC1F8BFBE09F66E7BDB697 /* PGPCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 442AF2D3B64B3976670BA81774824835 /* PGPCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA1605241F7B737100121E16 /* PGPXCalendarDayItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1605221F7B737100121E16 /* PGPXCalendarDayItem.h */; };
+		DA1605281F7B739400121E16 /* PGPXCalendarMonthLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DA1605261F7B739400121E16 /* PGPXCalendarMonthLayout.h */; };
+		DA16052C1F7DE38A00121E16 /* PGPXCalendarDayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1605231F7B737100121E16 /* PGPXCalendarDayItem.m */; };
+		DA16052D1F7DE4DB00121E16 /* PGPXCalendarMonthLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA16052A1F7B745600121E16 /* PGPXCalendarMonthLayout.m */; };
 		E29F0E2A1600BB4291897A73B5600F49 /* PGPXCalendarViewItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A0B8E5AD04EFD6D3D8A845D19AC63A /* PGPXCalendarViewItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0ED268F823A065F02FDE062E2763F0E /* PGPCalendarView-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FA1703EAC5B2A6B508C99ABDBBF920 /* PGPCalendarView-iOS-dummy.m */; };
 		F14DE9A66195B64F4164DFBA1D45800A /* Pods-PGPXCalendarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EF0C8BB099EE11A068BA4E83EB03BB /* Pods-PGPXCalendarView-dummy.m */; };
@@ -114,7 +115,6 @@
 		13BD036EAE8C370469EE42F6496351BD /* PGPCalendarView-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PGPCalendarView-macOS.xcconfig"; path = "../PGPCalendarView-macOS/PGPCalendarView-macOS.xcconfig"; sourceTree = "<group>"; };
 		278BF42782FF95D90AB6DD539B37EB49 /* HWCollapseArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = HWCollapseArrow.png; path = Pod/Assets/HWCollapseArrow.png; sourceTree = "<group>"; };
 		321A2E6A3229B7D6402C01B37805A93C /* Pods-PGPCalendarView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		3638F56C99A95C82120C9C2B5B315270 /* PGPXCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPXCollectionView.h; sourceTree = "<group>"; };
 		3C16BCC07D692B937A8007C349BA780D /* PGPXCalendarViewItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXCalendarViewItem.m; sourceTree = "<group>"; };
 		43F68D5EC45AC37B61AAED791693CF21 /* PGPCalendarViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarViewCell.h; sourceTree = "<group>"; };
 		442AF2D3B64B3976670BA81774824835 /* PGPCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarView.h; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		634BA87049292CFAFA37E65BDD417E88 /* PGPCalendarMarkerContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPCalendarMarkerContainerView.h; sourceTree = "<group>"; };
 		64411FAD0DD1829A4EC69854077CFAB2 /* PGPXScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXScrollView.m; sourceTree = "<group>"; };
 		6570B924588334DC3B9AFB858E2DAE45 /* PGPCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarView.m; sourceTree = "<group>"; };
-		657B6106BF8F0DDFAEB48D4CE09C1B24 /* libPods-PGPXCalendarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PGPXCalendarView.a"; path = "libPods-PGPXCalendarView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		657B6106BF8F0DDFAEB48D4CE09C1B24 /* libPods-PGPXCalendarView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGPXCalendarView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A938E9A93390205C0BCBB68981A9432 /* Pods-PGPXCalendarView-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPXCalendarView-resources.sh"; sourceTree = "<group>"; };
 		6AFAEA118A632799EAEF2052928C1402 /* Pods-PGPCalendarView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGPCalendarView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6D7AC1ACC285CC1E91B04E78F567A0E4 /* PGPXCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPXCalendarHeaderView.h; sourceTree = "<group>"; };
@@ -142,46 +142,48 @@
 		8244D40CB842852296DCBD1A95566BF4 /* PGPCalendarViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PGPCalendarViewCell.xib; sourceTree = "<group>"; };
 		834CEC8E032746EE1808623AA6ECA0B7 /* HWExpandArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HWExpandArrow@2x.png"; path = "Pod/Assets/HWExpandArrow@2x.png"; sourceTree = "<group>"; };
 		84273EF2A331CFEE9F34B9D90743AB72 /* Pods-PGPCalendarView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGPCalendarView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8593C979AAB2B313ACE78773B60E0D95 /* libPGPCalendarView-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPGPCalendarView-iOS.a"; path = "libPGPCalendarView-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8593C979AAB2B313ACE78773B60E0D95 /* libPGPCalendarView-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPGPCalendarView-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A5AA47FFA9C8AFB7A70B4A6BCC4861 /* Pods-PGPCalendarView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PGPCalendarView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8892C7D8BAC7300A0465E67C1C66C605 /* Pods-PGPCalendarView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D6F5FD1F70E0D761441FB793173C851 /* PGPCalendarViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarViewCell.m; sourceTree = "<group>"; };
 		90253E5C962A4871A24D44A9FBED5260 /* Pods-PGPXCalendarView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPXCalendarView.debug.xcconfig"; sourceTree = "<group>"; };
 		9384070FF7B5184A952700C8D0E9B114 /* PGPCalendarView-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PGPCalendarView-macOS-dummy.m"; path = "../PGPCalendarView-macOS/PGPCalendarView-macOS-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DB70BD5545BF7D87986CC3CFCDFDEBB /* PGPCalendarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PGPCalendarController.m; path = Pod/Classes/PGPCalendarController.m; sourceTree = "<group>"; };
 		A5FA0D56D220D1C07B8CDEA5257226A8 /* PGPXDateCalloutTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPXDateCalloutTextField.h; sourceTree = "<group>"; };
 		A7FA1703EAC5B2A6B508C99ABDBBF920 /* PGPCalendarView-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PGPCalendarView-iOS-dummy.m"; sourceTree = "<group>"; };
 		A85EE367ED038676A04ED4295BEEC062 /* PGPCalendarView-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PGPCalendarView-iOS-prefix.pch"; sourceTree = "<group>"; };
-		ACF4C26674C1D86B1F9C5D955EE2BA37 /* libPGPCalendarView-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPGPCalendarView-macOS.a"; path = "libPGPCalendarView-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACF4C26674C1D86B1F9C5D955EE2BA37 /* libPGPCalendarView-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPGPCalendarView-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8F006E2F3B97BB1EBA6629931A7178 /* ResourceBundle-PGPCalendarView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-PGPCalendarView-Info.plist"; path = "../PGPCalendarView-macOS/ResourceBundle-PGPCalendarView-Info.plist"; sourceTree = "<group>"; };
 		AE9F97E2BA685427F454FEF5108E4E7E /* PGPXCalendarViewItemView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXCalendarViewItemView.m; sourceTree = "<group>"; };
 		B55C5DF350B19E4E0361221504E432C8 /* PGPCalendarHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarHeaderView.m; sourceTree = "<group>"; };
 		B6E04359BF8FE09761F882EE1C231AAE /* NSDate+PGPCalendarViewAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PGPCalendarViewAdditions.m"; path = "Pod/Classes/NSDate+PGPCalendarViewAdditions.m"; sourceTree = "<group>"; };
-		BA1B0556BB24D9C60321F804CFAF642C /* PGPXCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXCollectionView.m; sourceTree = "<group>"; };
 		BAFF92B61C4814D5B2D1DC88EFA2B76D /* Pods-PGPCalendarView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPCalendarView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C3B688282CE330740FA3FD7E425E230B /* PGPXCalendarViewItem.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PGPXCalendarViewItem.xib; sourceTree = "<group>"; };
 		C414FC75E1D16CB4E392ABA460B27342 /* PGPXCalendarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXCalendarView.m; sourceTree = "<group>"; };
 		C6F373F2758D02C5AF0E756EFB310823 /* Pods-PGPCalendarView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8B83BCF189BE09FBB889C1C106F5BE2 /* Pods-PGPCalendarView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PGPCalendarView_Example-dummy.m"; sourceTree = "<group>"; };
-		CA35204AEA75CB817354EC3E37DFA4DB /* libPods-PGPCalendarView_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PGPCalendarView_Tests.a"; path = "libPods-PGPCalendarView_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA35204AEA75CB817354EC3E37DFA4DB /* libPods-PGPCalendarView_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGPCalendarView_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF5BB660352B8BCD8BB4E75FB959D9A /* Pods-PGPXCalendarView-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGPXCalendarView-frameworks.sh"; sourceTree = "<group>"; };
 		CC6D81E1C2CB5AE836D6EF4EC7D90C8B /* Pods-PGPXCalendarView-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGPXCalendarView-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CDDAA23DDA8E082FC77E38FA01601C8F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		D33D1995F9E7AF320D5A01A186DE84EA /* Pods-PGPXCalendarView-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PGPXCalendarView-acknowledgements.plist"; sourceTree = "<group>"; };
 		D7F33F2D3AE56DBDD11F63CEF19ADFA6 /* Pods-PGPCalendarView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPCalendarView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DB137F9DDB80E529FBF6DB389DF972C0 /* PGPXCalendarView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = PGPXCalendarView.xib; sourceTree = "<group>"; };
+		DA1605221F7B737100121E16 /* PGPXCalendarDayItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGPXCalendarDayItem.h; sourceTree = "<group>"; };
+		DA1605231F7B737100121E16 /* PGPXCalendarDayItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGPXCalendarDayItem.m; sourceTree = "<group>"; };
+		DA1605261F7B739400121E16 /* PGPXCalendarMonthLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGPXCalendarMonthLayout.h; sourceTree = "<group>"; };
+		DA16052A1F7B745600121E16 /* PGPXCalendarMonthLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPXCalendarMonthLayout.m; sourceTree = "<group>"; };
 		DB8E2D632CADFEBE217900FD1D4F3ABF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E1A145193F4586FE5B546FD32CF35BA3 /* PGPXDateCalloutTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPXDateCalloutTextField.m; sourceTree = "<group>"; };
 		E66FE53EFFAF612D96057F75DF7E46A6 /* PGPCalendarView-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PGPCalendarView-macOS-prefix.pch"; path = "../PGPCalendarView-macOS/PGPCalendarView-macOS-prefix.pch"; sourceTree = "<group>"; };
 		E8136128BF5466FF602FB23485034B62 /* Pods-PGPXCalendarView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGPXCalendarView.release.xcconfig"; sourceTree = "<group>"; };
-		E93550BF1075427C07650E5B7A6464CF /* libPods-PGPCalendarView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PGPCalendarView_Example.a"; path = "libPods-PGPCalendarView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93550BF1075427C07650E5B7A6464CF /* libPods-PGPCalendarView_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGPCalendarView_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DB771E86CD52DD8770D500C1493527 /* PGPXScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPXScrollView.h; sourceTree = "<group>"; };
 		ED2F17BC37D48A112CC2AC3C777D4CAF /* PGPCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PGPCalendarHeaderView.h; path = Pod/Classes/PGPCalendarHeaderView.h; sourceTree = "<group>"; };
 		EDD2318B863E4C169019E174EAD5012B /* PGPXCalendarView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PGPXCalendarView.h; sourceTree = "<group>"; };
 		F093F29ADB2F1661B45B06F50E2826E8 /* HWExpandArrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "HWExpandArrow@3x.png"; path = "Pod/Assets/HWExpandArrow@3x.png"; sourceTree = "<group>"; };
 		F446E386704C6BB6B7A0D436E2D56B68 /* NSDate+PGPCalendarViewAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PGPCalendarViewAdditions.h"; path = "Pod/Classes/NSDate+PGPCalendarViewAdditions.h"; sourceTree = "<group>"; };
-		F9B945C660C300CAF5AB0F18B576E079 /* PGPCalendarView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = PGPCalendarView.bundle; path = PGPCalendarView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B945C660C300CAF5AB0F18B576E079 /* PGPCalendarView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGPCalendarView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEDA5C9A4606CFF0417E1B6D2427C04 /* PGPCalendarMarkerContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PGPCalendarMarkerContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +274,6 @@
 				CA35204AEA75CB817354EC3E37DFA4DB /* libPods-PGPCalendarView_Tests.a */,
 				657B6106BF8F0DDFAEB48D4CE09C1B24 /* libPods-PGPXCalendarView.a */,
 				F9B945C660C300CAF5AB0F18B576E079 /* PGPCalendarView.bundle */,
-				F9B945C660C300CAF5AB0F18B576E079 /* PGPCalendarView.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,7 +281,6 @@
 		270EF13C354D915847A916A2938F40D0 /* osx */ = {
 			isa = PBXGroup;
 			children = (
-				DB137F9DDB80E529FBF6DB389DF972C0 /* PGPXCalendarView.xib */,
 				C3B688282CE330740FA3FD7E425E230B /* PGPXCalendarViewItem.xib */,
 			);
 			name = osx;
@@ -330,14 +330,16 @@
 				3C16BCC07D692B937A8007C349BA780D /* PGPXCalendarViewItem.m */,
 				51A0B8E5AD04EFD6D3D8A845D19AC63A /* PGPXCalendarViewItemView.h */,
 				AE9F97E2BA685427F454FEF5108E4E7E /* PGPXCalendarViewItemView.m */,
-				3638F56C99A95C82120C9C2B5B315270 /* PGPXCollectionView.h */,
-				BA1B0556BB24D9C60321F804CFAF642C /* PGPXCollectionView.m */,
 				A5FA0D56D220D1C07B8CDEA5257226A8 /* PGPXDateCalloutTextField.h */,
 				E1A145193F4586FE5B546FD32CF35BA3 /* PGPXDateCalloutTextField.m */,
 				0DAFF7E9B256F7358B78512B924DAE76 /* PGPXMarkerView.h */,
 				5B18C1218F321C2A05C3BECFBCCCB20C /* PGPXMarkerView.m */,
 				E9DB771E86CD52DD8770D500C1493527 /* PGPXScrollView.h */,
 				64411FAD0DD1829A4EC69854077CFAB2 /* PGPXScrollView.m */,
+				DA1605221F7B737100121E16 /* PGPXCalendarDayItem.h */,
+				DA1605231F7B737100121E16 /* PGPXCalendarDayItem.m */,
+				DA1605261F7B739400121E16 /* PGPXCalendarMonthLayout.h */,
+				DA16052A1F7B745600121E16 /* PGPXCalendarMonthLayout.m */,
 			);
 			name = osx;
 			path = Pod/Classes/osx;
@@ -477,7 +479,6 @@
 				13D6D8918F38D7CE9CE24957C747173A /* PGPXCalendarView.h in Headers */,
 				AA17A552F41527101F9E0921D9730D0D /* PGPXCalendarViewItem.h in Headers */,
 				E29F0E2A1600BB4291897A73B5600F49 /* PGPXCalendarViewItemView.h in Headers */,
-				0F224070BF977774F8DE9349468F9572 /* PGPXCollectionView.h in Headers */,
 				51F8C7248ADD2C68F0292A814C5EA7EB /* PGPXDateCalloutTextField.h in Headers */,
 				5701C4450D21A0F134154AF3CA75AEC7 /* PGPXMarkerView.h in Headers */,
 				7301C9932B5DACAD4F95A7EB1BAE8C66 /* PGPXScrollView.h in Headers */,
@@ -489,11 +490,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				941B39012DC2E9AED070C1B8984E56EF /* NSDate+PGPCalendarViewAdditions.h in Headers */,
+				DA1605281F7B739400121E16 /* PGPXCalendarMonthLayout.h in Headers */,
 				C9FA1B9E769A09DB46FF26459BEBAAE1 /* PGPCalendarController.h in Headers */,
 				36350FA6987A2313573E43C4B959396C /* PGPCalendarHeaderView.h in Headers */,
 				35108335EEF520F4FB9D7AF079AE0CB0 /* PGPCalendarMarkerContainerView.h in Headers */,
 				D7DB6DA41CBC1F8BFBE09F66E7BDB697 /* PGPCalendarView.h in Headers */,
 				4C6025C9B42CC5E3AED4118E982AA15E /* PGPCalendarViewCell.h in Headers */,
+				DA1605241F7B737100121E16 /* PGPXCalendarDayItem.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +682,6 @@
 				AC86BE3BBBA871B23C48E53FD619F4F3 /* HWExpandArrow.png in Resources */,
 				48CE7B954314F09064B3B0CF427FCE64 /* HWExpandArrow@2x.png in Resources */,
 				3D11F8B80584EEE1C96BE442B3832DFE /* HWExpandArrow@3x.png in Resources */,
-				20F66000A1E6C0BB0BE4C4767FD615D0 /* PGPXCalendarView.xib in Resources */,
 				F5BDA97DC461B715F27B79CC7E35525C /* PGPXCalendarViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,13 +746,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EED277F9B9A96389805A494E028879D /* NSDate+PGPCalendarViewAdditions.m in Sources */,
+				DA16052D1F7DE4DB00121E16 /* PGPXCalendarMonthLayout.m in Sources */,
 				A5B69FC0A3A587AB4274A2C3A3ED4401 /* PGPCalendarController.m in Sources */,
 				BC4F7EBE4CC25D6F2CC1264EBFD0C8F6 /* PGPCalendarView-macOS-dummy.m in Sources */,
 				7A6743099EE87CE9476C92256D69B895 /* PGPXCalendarHeaderView.m in Sources */,
+				DA16052C1F7DE38A00121E16 /* PGPXCalendarDayItem.m in Sources */,
 				4FE756FAF92D115F4535F2D93FA7B171 /* PGPXCalendarView.m in Sources */,
 				8856B32B19B829B972DAB1DBF0BF414B /* PGPXCalendarViewItem.m in Sources */,
 				252ECDD065A1C6DB3B948902987F8DE9 /* PGPXCalendarViewItemView.m in Sources */,
-				3612597C149C5F0587A86E23D0C809FE /* PGPXCollectionView.m in Sources */,
 				9E9B08C4FA0826F14DFF3426125A8540 /* PGPXDateCalloutTextField.m in Sources */,
 				75539C963E2166AB13A1DE0AE97CC9B0 /* PGPXMarkerView.m in Sources */,
 				3B441EF2A61D6702AFCC76015A82B021 /* PGPXScrollView.m in Sources */,

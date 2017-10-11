@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+#import "PGPXCalendarView.h"
 
+@interface ViewController : NSViewController < PGPXCalendarViewDataSource, PGPXCalendarViewDelegate >
+
+@property (strong) IBOutlet PGPXCalendarView *calendarView;
 
 @end
 

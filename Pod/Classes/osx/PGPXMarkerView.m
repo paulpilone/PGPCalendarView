@@ -29,6 +29,19 @@ static CGFloat PGPXCalendarMarkerPadding = 2.f;
     return self;
 }
 
+- (instancetype)init {
+  return [self initWithFrame:NSZeroRect];
+}
+
+- (instancetype)initWithFrame:(NSRect)frameRect {
+  self = [super initWithFrame:frameRect];
+  if (self) {
+    _markerSize = CGSizeMake(5.f, 5.f);
+  }
+  
+  return self;
+}
+
 /* */
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
