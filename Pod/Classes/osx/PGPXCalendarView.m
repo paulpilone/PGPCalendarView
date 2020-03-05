@@ -84,7 +84,7 @@
 
 /* */
 - (CGSize)intrinsicContentSize {
-  return CGSizeMake(280.f, 290.f);
+  return CGSizeMake(280.f, 260.f);
 }
 
 /* */

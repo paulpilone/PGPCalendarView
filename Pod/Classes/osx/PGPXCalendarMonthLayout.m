@@ -62,9 +62,11 @@ static NSInteger PGPXCalendarMonthLayoutNumberOfRows = 6;
 
 /* */
 - (IBAction)itemSelected:(id)sender {
-  if ([sender respondsToSelector:@selector(date)]) {
-    if ([self.delegate respondsToSelector:@selector(calendarMonthLayout:didSelectDate:)]) {
-      [self.delegate calendarMonthLayout:self didSelectDate:[sender date]];
+  if ([sender respondsToSelector:@selector(date)] && [sender respondsToSelector:@selector(selected)]) {
+    if (![sender selected]) {
+      if ([self.delegate respondsToSelector:@selector(calendarMonthLayout:didSelectDate:)]) {
+        [self.delegate calendarMonthLayout:self didSelectDate:[sender date]];
+      }
     }
   }
 }

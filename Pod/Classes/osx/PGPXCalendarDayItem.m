@@ -45,7 +45,12 @@
 
 /* */
 - (void)mouseUp:(NSEvent *)event {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+  
   [self.target performSelector:self.action withObject:self];
+  
+#pragma clang diagnostic pop
 }
 
 - (void)setDate:(NSDate *)date {
@@ -97,7 +102,8 @@
   
   _markerView = [[PGPXMarkerView alloc] init];
   _markerView.translatesAutoresizingMaskIntoConstraints = NO;
-  [_markerView addConstraints:@[[NSLayoutConstraint constraintWithItem:_markerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:34.f],
+  [_markerView addConstraints:@[
+                                [NSLayoutConstraint constraintWithItem:_markerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:34.f],
                                 [NSLayoutConstraint constraintWithItem:_markerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:18.f]
                                 ]];
   
@@ -109,7 +115,7 @@
                          [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:_textField attribute:NSLayoutAttributeTrailing multiplier:1.f constant:0.f],
                          [NSLayoutConstraint constraintWithItem:_textField attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.f],
                          [NSLayoutConstraint constraintWithItem:_markerView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0.f],
-                         [NSLayoutConstraint constraintWithItem:_textField attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual  toItem:_markerView attribute:NSLayoutAttributeTop multiplier:1.f constant:1.f],
+                         [NSLayoutConstraint constraintWithItem:_textField attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual  toItem:_markerView attribute:NSLayoutAttributeTop multiplier:1.f constant:0.f],
                          ]];
 }
 
@@ -117,6 +123,7 @@
 - (void)updateTextField {
   NSColor *textColor = nil;
   NSColor *fillColor = nil;
+  
   if (self.selectable && self.selected && self.today) {
     fillColor = self.todaySelectedBackgroundColor;
     textColor = self.todaySelectedTextColor;
@@ -131,7 +138,7 @@
     textColor = self.textColor;
   } else {
     fillColor = self.backgroundColor;
-    textColor = [NSColor colorWithWhite:.5 alpha:1.f];
+    textColor = [NSColor colorWithWhite:.6 alpha:1.f];
   }
   
   self.textField.fillColor = fillColor;

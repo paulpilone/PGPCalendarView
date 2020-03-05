@@ -317,9 +317,11 @@ static CGFloat PGPCalendarViewGoToDateAnimationDuration = 0.2;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_borderView]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_navigationView(32)][_headerView(17)][_collectionView][_borderView(1)]|" options:0 metrics:nil views:views]];
     
-    NSString *calendarBundlePath = [[NSBundle mainBundle] pathForResource:@"PGPCalendarView" ofType:@"bundle"];
-    NSBundle *calendarBundle = [NSBundle bundleWithPath:calendarBundlePath];
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([PGPCalendarViewCell class]) bundle:calendarBundle];
+    NSBundle *calendarBundle = [NSBundle bundleForClass:self.classForCoder];
+    NSURL *calendarBundleURL = [[calendarBundle resourceURL] URLByAppendingPathComponent:@"PGPCalendarView.bundle"];
+    NSBundle *calendarResourceBundle = [NSBundle bundleWithURL:calendarBundleURL];
+    
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([PGPCalendarViewCell class]) bundle:calendarResourceBundle];
     [_collectionView registerNib:nib forCellWithReuseIdentifier:PGPCalendarViewCellIdentifier];
     
     // We derive item size from the frame of our collection view.
